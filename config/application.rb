@@ -36,12 +36,7 @@ module SaunaLinebot
       g.skip_routes true
       g.assets false
       g.helper false
-      g.test_framework :rspec,
-                       view_specs: false,
-                       helper_specs: false,
-                       routing_specs: false,
-                       request_specs: false,
-                       system_specs: true
+      g.test_framework false
     end
   end
 end
