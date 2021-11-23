@@ -1,0 +1,52 @@
+# inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+# ここで設定したファイルはチェック対象外
+AllCops:
+  Exclude:
+    - 'Gemfile'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    # - 'spec/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+## 日本語でのコメントを許可
+Style/AsciiComments:
+  Enabled: false
+
+# 以下、デフォルトのアラートを一部無効
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# クラス上にコメントが無くても許可
+Style/Documentation:
+  Enabled: false
+
+# パスの要素ごとに区切って複数の文字列を渡すのを許可
+Rails/FilePath:
+  Exclude:
+    - 'config/environments/*'
+
+# 大文字等許可
+Style/GlobalStdStream:
+  Exclude:
+    - 'config/environments/*'
+
+# ハッシュ等許可
+Style/RedundantFetchBlock:
+  Exclude:
+    - 'config/puma.rb'
+
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/sorcery.rb'
+
+# # 行数を 25 行以上許可
+# Metrics/BlockLength:
+#   Exclude:
+#     - 'spec/**/*'
