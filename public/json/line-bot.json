@@ -1,0 +1,709 @@
+{
+  "メニューに戻る": [
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "メニュー",
+            "text": "下から何で遊ぶかお選びください。\nととのい診断はサウナ後にするのがおすすめです❕",
+            "actions": [
+              {
+                "type": "message",
+                "label": "サウナのすゝめをする",
+                "text": "サウナのすゝめをする"
+              },
+              {
+                "type": "message",
+                "label": "ととのうコツをする",
+                "text": "ととのうコツをする"
+              },
+              {
+                "type": "message",
+                "label": "ととのい診断をする",
+                "text": "ととのい診断をする"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "サウナのすゝめをする":[
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "サウナのすゝめとは",
+            "text": "6つ質問します。質問に答えて、正しいサウナの入り方とマナーを学ぶことができます♨",
+            "actions": [
+              {
+                "type": "message",
+                "label": "開始する",
+                "text": "開始する"
+              },
+              {
+                "type": "message",
+                "label": "メニューに戻る",
+                "text": "メニューに戻る"
+              }
+            ],
+            "imageBackgroundColor": "#FFFFFF"
+          }
+        ]
+      }
+    }
+  ],
+  "開始する":[
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問1",
+            "text": "ととのうための正しいサウナの入る順番は、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "サウナ → 外気浴 → 水風呂",
+                "text": "サウナ → 外気浴 → 水風呂"
+              },
+              {
+                "type": "message",
+                "label": "サウナ → 水風呂 → 外気浴",
+                "text": "サウナ → 水風呂 → 外気浴"
+              },
+              {
+                "type": "message",
+                "label": "水風呂 → サウナ → 外気浴",
+                "text": "水風呂 → サウナ → 外気浴"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "サウナ → 外気浴 → 水風呂":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「サウナ → 水風呂 → 外気浴」でした😌\n以上のサイクルを3回繰り返すのが理想です。\nサウナでは大量の汗をかくので、こまめに水分補給を行いましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問2",
+            "text": "サウナに入る前の正しいマナーは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "体表面の水滴を拭き取る",
+                "text": "体表面の水滴を拭き取る"
+              },
+              {
+                "type": "message",
+                "label": "濡れたまま入る",
+                "text": "濡れたまま入る"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "サウナ → 水風呂 → 外気浴":[
+    {
+      "type": "sticker",
+      "packageId": "11539",
+      "stickerId": "52114113"
+    },
+    {
+      "type": "text",
+      "text": "正解です🎉\n「サウナ → 水風呂 → 外気浴」を3回繰り返すのが理想です。\nサウナでは大量の汗をかくので、こまめに水分補給を行いましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問2",
+            "text": "サウナに入る前の正しいマナーは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "体表面の水滴を拭き取る",
+                "text": "体表面の水滴を拭き取る"
+              },
+              {
+                "type": "message",
+                "label": "濡れたまま入る",
+                "text": "濡れたまま入る"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "水風呂 → サウナ → 外気浴":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「サウナ → 水風呂 → 外気浴」でした😌\n以上のサイクルを3回繰り返すのが理想です。\nサウナでは大量の汗をかくので、こまめに水分補給を行いましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問2",
+            "text": "サウナに入る前の正しいマナーは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "体表面の水滴を拭き取る",
+                "text": "体表面の水滴を拭き取る"
+              },
+              {
+                "type": "message",
+                "label": "濡れたまま入る",
+                "text": "濡れたまま入る"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "体表面の水滴を拭き取る":[
+    {
+      "type": "sticker",
+      "packageId": "11539",
+      "stickerId": "52114113"
+    },
+    {
+      "type": "text",
+      "text": "正解です🎉\nサウナ内を汚さないためにも、乾いた状態で入るのがマナーです。\nお互いに気持ちの良いサウナを過ごせるように努めましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問3",
+            "text": "サウナから出るタイミングは、何を目安にすると良いでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "時間",
+                "text": "時間"
+              },
+              {
+                "type": "message",
+                "label": "汗の量",
+                "text": "汗の量"
+              },
+              {
+                "type": "message",
+                "label": "心拍数",
+                "text": "心拍数"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "濡れたまま入る":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「体表面の水滴を拭き取る」でした😌\nサウナ内を汚さないためにも、乾いた状態で入るのがマナーです。\nお互いに気持ちの良いサウナを過ごせるように努めましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問3",
+            "text": "サウナから出るタイミングは、何を目安にすると良いでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "時間",
+                "text": "時間"
+              },
+              {
+                "type": "message",
+                "label": "汗の量",
+                "text": "汗の量"
+              },
+              {
+                "type": "message",
+                "label": "心拍数",
+                "text": "心拍数"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "時間":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「心拍数」でした😌\n心拍数が平常時の「2倍」になったら出るのがおすすめです。\nあくまで目安のため、無理をしないようにしましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問4",
+            "text": "サウナ後、水風呂に入る前の正しいマナーは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "シャワー等で汗を洗い流す",
+                "text": "シャワー等で汗を洗い流す"
+              },
+              {
+                "type": "message",
+                "label": "汗を洗い流さず入る",
+                "text": "汗を洗い流さず入る"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "汗の量":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「心拍数」でした😌\n心拍数が平常時の「2倍」になったら出るのがおすすめです。\nあくまで目安のため、無理をしないようにしましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問4",
+            "text": "サウナ後、水風呂に入る前の正しいマナーは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "シャワー等で汗を洗い流す",
+                "text": "シャワー等で汗を洗い流す"
+              },
+              {
+                "type": "message",
+                "label": "汗を洗い流さず入る",
+                "text": "汗を洗い流さず入る"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "心拍数":[
+    {
+      "type": "sticker",
+      "packageId": "11539",
+      "stickerId": "52114113"
+    },
+    {
+      "type": "text",
+      "text": "正解です🎉\n心拍数が平常時の「2倍」になったら出るのがおすすめです。\nあくまで目安のため、無理をしないようにしましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問4",
+            "text": "サウナ後、水風呂に入る前の正しいマナーは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "シャワー等で汗を洗い流す",
+                "text": "シャワー等で汗を洗い流す"
+              },
+              {
+                "type": "message",
+                "label": "汗を洗い流さず入る",
+                "text": "汗を洗い流さず入る"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "シャワー等で汗を洗い流す":[
+    {
+      "type": "sticker",
+      "packageId": "11539",
+      "stickerId": "52114113"
+    },
+    {
+      "type": "text",
+      "text": "正解です🎉\n水風呂を汚さないためにも、汗を洗い流してから入るのがマナーです。\nお互いに気持ち良く水風呂に入れるように努めましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問5",
+            "text": "水風呂の入浴時間の目安は、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "1 ~ 2分",
+                "text": "1 ~ 2分"
+              },
+              {
+                "type": "message",
+                "label": "4 ~ 5分",
+                "text": "4 ~ 5分"
+              },
+              {
+                "type": "message",
+                "label": "10分以上",
+                "text": "10分以上"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "汗を洗い流さず入る":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「シャワー等で汗を洗い流す」でした😌\nサウナ内を汚さないためにも、乾いた状態で入るのがマナーです。\nお互いに気持ちの良いサウナを過ごせるように努めましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "質問5",
+            "text": "水風呂の入浴時間の目安は、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "1 ~ 2分",
+                "text": "1 ~ 2分"
+              },
+              {
+                "type": "message",
+                "label": "4 ~ 5分",
+                "text": "4 ~ 5分"
+              },
+              {
+                "type": "message",
+                "label": "10分以上",
+                "text": "10分以上"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "1 ~ 2分":[
+    {
+      "type": "sticker",
+      "packageId": "11539",
+      "stickerId": "52114113"
+    },
+    {
+      "type": "text",
+      "text": "正解です🎉\n水温や個人差にもよりますが、1 ~ 2分で心拍数が平常時に戻ります。\nあくまで目安のため、無理をしないようにしましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "最後の質問です。",
+            "text": "水風呂後、外気浴する前にすることは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "湯船で体を温める",
+                "text": "湯船で体を温める"
+              },
+              {
+                "type": "message",
+                "label": "何もせず外気浴へ移動する",
+                "text": "何もせず外気浴へ移動する"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "4 ~ 5分":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「1 ~ 2分」でした😌\n水温や個人差にもよりますが、1 ~ 2分で心拍数が平常時に戻ります。\nあくまで目安のため、無理をしないようにしましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "最後の質問です。",
+            "text": "水風呂後、外気浴する前にすることは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "湯船で体を温める",
+                "text": "湯船で体を温める"
+              },
+              {
+                "type": "message",
+                "label": "何もせず外気浴へ移動する",
+                "text": "何もせず外気浴へ移動する"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "10分以上":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「1 ~ 2分」でした😌\n水温や個人差にもよりますが、1 ~ 2分で心拍数が平常時に戻ります。\nあくまで目安のため、無理をしないようにしましょう❕"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "最後の質問です。",
+            "text": "水風呂後、外気浴する前にすることは、次のうちどれでしょう❓",
+            "actions": [
+              {
+                "type": "message",
+                "label": "湯船で体を温める",
+                "text": "湯船で体を温める"
+              },
+              {
+                "type": "message",
+                "label": "何もせず外気浴へ移動する",
+                "text": "何もせず外気浴へ移動する"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "湯船で体を温める":[
+    {
+      "type": "sticker",
+      "packageId": "11537",
+      "stickerId": "52002760"
+    },
+    {
+      "type": "text",
+      "text": "正解は「何もせず外気浴へ移動する」でした😌\nととのいタイムは、水風呂から出て約2分間です。\n素早く外気浴に移動しましょう❕"
+    },
+    {
+      "type": "text",
+      "text": "お疲れさまでした。\n正しいサウナの入り方とマナーを学ぶことはできたでしょうか❓\nサウナのすゝめの他に\n「ととのうコツ」と「ととのい診断」も用意しております❕\nぜひ遊んでみてください😆"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "メニュー",
+            "text": "下から何で遊ぶかお選びください。\nととのい診断はサウナ後にするのがおすすめです❕",
+            "actions": [
+              {
+                "type": "message",
+                "label": "サウナのすゝめをする",
+                "text": "サウナのすゝめをする"
+              },
+              {
+                "type": "message",
+                "label": "ととのうコツを学ぶ",
+                "text": "ととのうコツを学ぶ"
+              },
+              {
+                "type": "message",
+                "label": "ととのい診断をする",
+                "text": "ととのい診断をする"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "何もせず外気浴へ移動する":[
+    {
+      "type": "sticker",
+      "packageId": "11539",
+      "stickerId": "52114113"
+    },
+    {
+      "type": "text",
+      "text": "正解です🎉\nととのいタイムは、水風呂から出て約2分間です。\n素早く外気浴に移動しましょう❕"
+    },
+    {
+      "type": "text",
+      "text": "お疲れさまでした。\n正しいサウナの入り方とマナーを学ぶことはできたでしょうか❓\nサウナのすゝめの他に\n「ととのうコツ」と「ととのい診断」も用意しております❕\nぜひ遊んでみてください😆"
+    },
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "メニュー",
+            "text": "下から何で遊ぶかお選びください。\nととのい診断はサウナ後にするのがおすすめです❕",
+            "actions": [
+              {
+                "type": "message",
+                "label": "サウナのすゝめをする",
+                "text": "サウナのすゝめをする"
+              },
+              {
+                "type": "message",
+                "label": "ととのうコツを学ぶ",
+                "text": "ととのうコツを学ぶ"
+              },
+              {
+                "type": "message",
+                "label": "ととのい診断をする",
+                "text": "ととのい診断をする"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "ととのうコツを学ぶ": [
+    {
+      "type": "template",
+      "altText": "this is a carousel template",
+      "template": {
+        "type": "carousel",
+        "columns": [
+          {
+            "title": "ととのうコツとは",
+            "text": "サウナ、水風呂、外気浴それぞれフェーズ毎にととのうためのコツを学ぶことができます♨",
+            "actions": [
+              {
+                "type": "message",
+                "label": "サウナのコツを学ぶ",
+                "text": "サウナのコツを学ぶ"
+              },
+              {
+                "type": "message",
+                "label": "水風呂のコツを学ぶ",
+                "text": "水風呂のコツを学ぶ"
+              },
+              {
+                "type": "message",
+                "label": "外気浴のコツを学ぶ",
+                "text": "外気浴のコツを学ぶ"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "予想しないメッセージ": {
+    "type": "text",
+    "text": "メッセージありがとうございます。\nごめんなさい。まだサウナについて勉強中のため、個別のお問い合わせには答えられません💦"
+  }
+}
+

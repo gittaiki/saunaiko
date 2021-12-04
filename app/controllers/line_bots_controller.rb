@@ -22,13 +22,14 @@ class LineBotsController < ApplicationController
         # textであるかどうかを評価
         case event.type
         when Line::Bot::Event::MessageType::Text
-          # 返信メッセージを作成
-          message = {
-            type: 'text',
-            # 送られてきたメッセージを取り出す
-            text: event.message['text']
-          }
-          client.reply_message(event['replyToken'], message)
+
+          message = event.message['text']
+          # JSONファイルに文字列[message]のjsonデータがあるか検証
+          if api_response[message]
+            client.reply_message(event['replyToken'], api_response[message])
+          else
+            client.reply_message(event['replyToken'], api_response['予想しないメッセージ'])
+          end
         end
       end
     end
@@ -44,5 +45,12 @@ class LineBotsController < ApplicationController
       config.channel_secret = ENV['LINE_CHANNEL_SECRET']
       config.channel_token = ENV['LINE_CHANNEL_TOKEN']
     end
+  end
+
+  # public/jsonにあるJSONファイルを呼びだす
+  def api_response
+    # モジュールparseは文字列しかRubyオブジェクトに変換できない
+    @json ||= open('public/json/line-bot.json').read
+    JSON.parse(@json)
   end
 end
