@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'line-bot-api'
 # 環境変数を管理
 gem 'dotenv-rails'
+# slim化
+gem 'slim-rails'
+gem 'html2slim'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
