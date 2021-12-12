@@ -1,24 +1,23 @@
-# README
+### サービス名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+サウナのすゝめ
 
-Things you may want to cover:
+### サービス概要
 
-* Ruby version
+サウナの正しい入り方やととのうためのコツを<br>
+LINEのチャットボットとの会話で学ぶサービスです。
 
-* System dependencies
+### メインのターゲットユーザー
 
-* Configuration
+* サウナに興味がある人<br>
+* 今以上にサウナでととのいたい人
 
-* Database creation
+### ユーザーが抱える課題
 
-* Database initialization
+サウナに行ったこと無い人は、正しい入り方やマナーがありそうで敷居が高いと思われている。<br>
+また行ってみたものの、ととのえられたのかわからない。
 
-* How to run the test suite
+### 解決方法
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+以上の課題をLINEのチャットボットとの会話で、<br>
+サウナの正しい入り方やマナーと、ととのうためのコツを学べるようにします。
