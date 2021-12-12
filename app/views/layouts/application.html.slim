@@ -7,7 +7,7 @@ html
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  body.mintyou
-    .container.mx-auto
-      .text-center
+  body
+    .container-fluid
+      .text-center.mintyou
         = yield
