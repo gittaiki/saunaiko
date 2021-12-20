@@ -1,7 +1,16 @@
 doctype html
 html
   head
-    = display_meta_tags(default_meta_tags)
+    = favicon_pack_tag 'sauna_after_color.png'
+    title
+      | サウナのすゝめ
+
+    meta[name="twitter:card" content="summary"]
+    meta[name="twitter:site" content="@_taaaaiki"]
+    meta[property="og:url" content="https://sauna-no-susume.herokuapp.com/"]
+    meta[property="og:title" content="サウナのすゝめ"]
+    meta[property="og:description" content="サウナの敷居を下げるサービスです。"]
+    meta[property="og:image" content="<%= image_pack_tag 'twitter_card.png' %>"]
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
