@@ -9,11 +9,12 @@ html
     meta[name="twitter:site" content="@_taaaaiki"]
     meta[property="og:url" content="https://sauna-no-susume.herokuapp.com/"]
     meta[property="og:title" content="サウナのすゝめ"]
-    meta[property="og:description" content="サウナの敷居を低くするサービスです。"]
-    meta[property="og:image" content="<%= image_pack_tag 'twitter_card.png' %>"]
+    meta[property="og:description" content="サウナでととのうための準備をするアプリ。友だち追加するとサウナの正しい入り方と、ととのうコツを学ぶことができます。"]
+    meta[property="og:image" content="#{image_url('twitter_card.png')}"]
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
