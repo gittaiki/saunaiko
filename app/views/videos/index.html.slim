@@ -1,2 +1,7 @@
-h1 Videos#index
-p Find me in app/views/videos/index.html.slim
+= link_to '入門編', videos_path(level: 'entry')
+= link_to '基礎編', videos_path(level: 'basic')
+= link_to '発展編', videos_path(level: 'advanced')
+br
+- @videos.each do |video|
+  = content_tag 'iframe', nil, width: 400, height: 200, src: "https://www.youtube-nocookie.com/embed/#{video.youtube_id}", \
+    frameborder: 0, allow: 'encrypted-media', allowfullscreen: true
