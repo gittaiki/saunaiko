@@ -1,6 +1,9 @@
 class Video < ApplicationRecord
-  validates :youtube_id, presence: true
+  with_options presence: true do
+    validates :youtube_id
+    validates :youtuber
+    validates :sauna
+  end
 
-  # entry: 入門編、basic: 基礎編、advanced: 応用編
-  enum level: { entry: 0, basic: 1, advanced: 2 }
+  validates :youtube_id, uniqueness: true
 end

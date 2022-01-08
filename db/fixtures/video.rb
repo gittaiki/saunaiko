@@ -1,57 +1,92 @@
-entry_youtube_ids = [
-  # 東海サウナ部にてつやが体験入部してきました
-  'DTL3DShbKhc',
-  # サウナーゆうこす、サウナの入り方&愛を語ります【VLOG】
-  'yiUP6-OQbqo',
-  # 藤森慎吾＆はじめしゃちょー＆おばたのお兄さん前編
-  'CIXSwK2Ap0A',
-  # 藤森慎吾＆はじめしゃちょー＆おばたのお兄さん後編
-  '1MkEhopnmWE'
-]
-
-basic_youtube_ids = [
-  # はじめしゃちょーのサウナの整い方。
-  'w1pWFesqPvA',
-  # 安田美沙子さんとサウナ！千葉・船橋G-topia 初ととのえの瞬間を見て！
-  '58OZ5pBhKLo',
-  # 【検証】1週間毎日サウナに通い続けたら体にどんな変化が起きるのか？【縛り生活】
-  'ozWEydEg3r0',
-  # アルピー酒井が徹底解説「かるまる池袋」の楽しみ方
-  'm4HBXCoLSR0'
-]
-
-advanced_youtube_ids = [
-  # ロンブー淳とかるまる
-  'iTSsv7AZ8dw',
-  # アルピーとテルマー湯
-  '_sgLjNF7ROA',
-  # アルピーとおふろの国
-  '36wrnwpvKPU',
-  # サウナ修学旅行in神奈川 ハマ熱波で大ピンチ⁉︎おふろの国
-  '3o1OtZmn438',
-  # ゴリラグース&MADMAX水風呂をガチ体験♡熊本 湯らっくす
-  'YqbNN1v7Ss0',
-  # 杉浦太陽さん初ととのい！in 千葉・館山「Sea Sauna Shack」
-  'gSVETgZWOmE'
-]
-
-entry_youtube_ids.each do |youtube_id|
-  Video.seed(:youtube_id) do |s|
-    s.youtube_id = youtube_id
-    s.level = 'entry'
-  end
-end
-
-basic_youtube_ids.each do |youtube_id|
-  Video.seed(:youtube_id) do |s|
-    s.youtube_id = youtube_id
-    s.level = 'basic'
-  end
-end
-
-advanced_youtube_ids.each do |youtube_id|
-  Video.seed(:youtube_id) do |s|
-    s.youtube_id = youtube_id
-    s.level = 'advanced'
-  end
-end
+Video.seed(:youtube_id,
+  {
+    youtube_id: 'DTL3DShbKhc',
+    youtuber: '東海オンエア',
+    sauna: 'おかざき楽の湯'
+  },
+  {
+    youtube_id: 'yiUP6-OQbqo',
+    youtuber: 'ゆうこす',
+    sauna: 'サウナしきじ'
+  },
+  {
+    youtube_id: 'CIXSwK2Ap0A',
+    youtuber: '藤森慎吾＆はじめしゃちょー＆おばたのお兄さん',
+    sauna: 'Kushiro Marshland Hostel THE GEEK'
+  },
+  {
+    youtube_id: '1MkEhopnmWE',
+    youtuber: '藤森慎吾＆はじめしゃちょー＆おばたのお兄さん',
+    sauna: '湯宿だいいち'
+  },
+  {
+    youtube_id: 'w1pWFesqPvA',
+    youtuber: 'はじめしゃちょー',
+    sauna: 'サウナしきじ'
+  },
+  {
+    youtube_id: '58OZ5pBhKLo',
+    youtuber: '安田美沙子＆TKO木本武宏',
+    sauna: 'カプセルホテル&サウナ ジートピア'
+  },
+  {
+    youtube_id: 'ozWEydEg3r0',
+    youtuber: '北の打ち師達',
+    sauna: '天然温泉 湯どんぶり栄湯'
+  },
+  {
+    youtube_id: 'm4HBXCoLSR0',
+    youtuber: 'アルピー酒井',
+    sauna: 'サウナ&ホテル かるまる 池袋店'
+  },
+  {
+    youtube_id: 'iTSsv7AZ8dw',
+    youtuber: 'ロンブー淳',
+    sauna: 'サウナ&ホテル かるまる 池袋店'
+  },
+  {
+    youtube_id: '_sgLjNF7ROA',
+    youtuber: 'アルコ&ピース',
+    sauna: '新宿天然温泉 テルマー湯'
+  },
+  {
+    youtube_id: '36wrnwpvKPU',
+    youtuber: 'アルコ&ピース',
+    sauna: 'ファンタジーサウナ&スパおふろの国'
+  },
+  {
+    youtube_id: '3yTmz3DR9d0',
+    youtuber: 'アルコ&ピース＆マグ万平',
+    sauna: 'サウナ&カプセルホテル 北欧'
+  },
+  {
+    youtube_id: 'gSVETgZWOmE',
+    youtuber: '杉浦太陽＆TKO木本武宏',
+    sauna: 'SeaSaunaShack/シーサウナシャック'
+  },
+  {
+    youtube_id: 'OOZjlb8wV5o',
+    youtuber: '霜降り明星',
+    sauna: 'abrAsus hotel Fuji'
+  },
+  {
+    youtube_id: '-AEkLQJ6ORU',
+    youtuber: 'アルピー酒井',
+    sauna: '朝日湯源泉ゆいる'
+  },
+  {
+    youtube_id: 'EEUAqusfu68',
+    youtuber: 'さらば青春の光 森田＆TKO木本武宏',
+    sauna: '松本湯'
+  },
+  {
+    youtube_id: '-jrB0NIswss',
+    youtuber: 'よゐこ濱口優＆TKO木本武宏',
+    sauna: 'JFA夢フィールド 幕張温泉 湯楽の里'
+  },
+  {
+    youtube_id: 'hvPfgP4PYnk',
+    youtuber: 'てんちむ',
+    sauna: '改良湯'
+  }
+)
