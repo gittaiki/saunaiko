@@ -1,7 +1,7 @@
-= link_to '入門編', videos_path(level: 'entry')
-= link_to '基礎編', videos_path(level: 'basic')
-= link_to '発展編', videos_path(level: 'advanced')
-br
 - @videos.each do |video|
-  = content_tag 'iframe', nil, width: 400, height: 200, src: "https://www.youtube-nocookie.com/embed/#{video.youtube_id}", \
-    frameborder: 0, allow: 'encrypted-media', allowfullscreen: true
+  =link_to video do
+    img src="https://img.youtube.com/vi/#{video.youtube_id}/mqdefault.jpg"
+  br
+  = video.sauna
+  = video.address
+  br

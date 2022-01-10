@@ -1,7 +1,7 @@
 class Video < ApplicationRecord
   with_options presence: true do
     validates :youtube_id
-    validates :youtuber
+    validates :address
     validates :sauna
   end
 

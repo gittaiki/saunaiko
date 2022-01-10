@@ -1,12 +1,9 @@
 class VideosController < ApplicationController
   def index
-    @videos = case params[:level]
-              when 'basic'
-                Video.basic
-              when 'advanced'
-                Video.advanced
-              else
-                Video.entry
-              end
+    @videos = Video.all
+  end
+
+  def show
+    @video = Video.find(params[:id])
   end
 end

@@ -1,0 +1,10 @@
+= content_tag 'iframe', nil, width: 560, height: 315, src: "https://www.youtube-nocookie.com/embed/#{@video.youtube_id}", frameborder: 0, allow: 'encrypted-media', allowfullscreen: true
+br
+= @video.address
+= @video.sauna
+br
+= content_tag 'iframe', nil, src: "https://maps.google.com/maps?output=embed&q=#{@video.sauna}", width: 560, height: 350, frameborder: 0, allowfullscreen: true
+br
+= link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&text=【#{@video.sauna}】でリモートサウナ！&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'
+/ br
+/ = link_to 'LINEで送る', 'https://line.me/R/nv/recommendOA/@353bfsoa', target: '_blank', rel: 'noopener noreferrer'

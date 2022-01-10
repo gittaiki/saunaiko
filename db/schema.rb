@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_12_26_073835) do
 
   create_table "videos", force: :cascade do |t|
     t.string "youtube_id", null: false
-    t.string "youtuber", null: false
+    t.string "address", null: false
     t.string "sauna", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
