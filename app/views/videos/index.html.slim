@@ -1,0 +1,7 @@
+- @videos.each do |video|
+  =link_to video do
+    img src="https://img.youtube.com/vi/#{video.youtube_id}/mqdefault.jpg"
+  br
+  = video.sauna
+  = video.address
+  br
