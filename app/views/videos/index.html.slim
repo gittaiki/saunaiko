@@ -1,7 +1,6 @@
-- @videos.each do |video|
-  =link_to video do
-    img src="https://img.youtube.com/vi/#{video.youtube_id}/mqdefault.jpg"
-  br
-  = video.sauna
-  = video.address
-  br
+= render 'search_form', url: videos_path
+- if @videos.present?
+  = render @videos
+- else
+  p
+    | 検索ワードにヒットする動画はありませんでした。

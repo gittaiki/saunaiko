@@ -36,6 +36,8 @@ gem 'slim-rails'
 gem 'html2slim'
 # 同じseedデータの追加防止と更新を容易にするためのgem
 gem 'seed-fu'
+# 検索機能実装のためのgem
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
