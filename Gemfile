@@ -38,6 +38,9 @@ gem 'html2slim'
 gem 'seed-fu'
 # 検索機能実装のためのgem
 gem 'ransack'
+# ページネーション実装のためのgem
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
