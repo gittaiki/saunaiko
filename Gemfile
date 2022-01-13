@@ -41,6 +41,8 @@ gem 'ransack'
 # ページネーション実装のためのgem
 gem 'kaminari'
 gem 'bootstrap5-kaminari-views'
+# 日本語化対応
+gem 'rails-i18n', '~> 6.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
