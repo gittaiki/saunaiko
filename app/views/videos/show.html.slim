@@ -1,8 +1,9 @@
-= content_tag 'iframe', nil, width: 560, height: 315, src: "https://www.youtube-nocookie.com/embed/#{@video.youtube_id}", frameborder: 0, allow: 'encrypted-media', allowfullscreen: true
+= javascript_pack_tag 'videos/show'
+/ show.jsにyoutube_idを読み込みさせている
+#video data-youtube="#{@video.youtube_id}"
+  #player
 br
 = @video.address
 = @video.sauna
 br
 = link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&text=【#{@video.sauna}】に行ってみたい！&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'
-/ br
-/ = link_to 'LINEで送る', 'https://line.me/R/nv/recommendOA/@353bfsoa', target: '_blank', rel: 'noopener noreferrer'
