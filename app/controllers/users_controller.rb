@@ -20,6 +20,5 @@ class UsersController < ApplicationController
     # DBにuserが保存されていなければユーザー登録する
     user = User.create!(line_user_id: line_user_id) if user.nil?
     session[:user_id] = user.id
-    # users/new.jsにレスポンス
   end
 end
