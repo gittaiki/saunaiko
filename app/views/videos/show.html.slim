@@ -1,7 +1,6 @@
 = javascript_pack_tag 'videos/show'
-/ show.jsにyoutube_idを読み込みさせている
-#video data-youtube="#{@video.youtube_id}"
-  #player
+/ 以下の#playerはyoutubeのiframeに入れ替わる。
+#player
 br
 = @video.address
 = @video.sauna
