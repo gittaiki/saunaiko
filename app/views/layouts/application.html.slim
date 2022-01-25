@@ -4,7 +4,7 @@ html
     = favicon_pack_tag 'favicon.png'
     title
       | サウナのすゝめ
-
+    script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"
     meta[name="twitter:card" content="summary"]
     meta[name="twitter:site" content="@_taaaaiki"]
     meta[property="og:url" content="https://sauna-no-susume.herokuapp.com/"]
@@ -16,6 +16,7 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = include_gon
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .container

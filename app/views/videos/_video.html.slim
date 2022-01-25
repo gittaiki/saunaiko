@@ -1,6 +1,6 @@
 .d-flex.flex-row
   .col-md-1.offset-1.mt-4
-    = link_to video do
+    = link_to video, data: { 'turbolinks': false } do
       = image_tag "https://img.youtube.com/vi/#{video.youtube_id}/mqdefault.jpg"
   .col-4.offset-1.my-4
   = video.sauna
