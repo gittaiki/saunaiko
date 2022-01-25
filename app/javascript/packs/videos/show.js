@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const video = document.getElementById('video');
-  const youtube_id = video.dataset.youtube;
-
   const tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   const firstScriptTag = document.getElementsByTagName('script')[0];
@@ -11,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     player = new YT.Player('player', {
       width: '560',
       height: '315',
-      videoId: youtube_id,
+      videoId: gon.youtube_id,
       events: {
         // api呼び出す準備ができると起動
         'onReady': function(evt) {
