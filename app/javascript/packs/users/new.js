@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   liff.init({
     liffId: gon.liff_id
   })
+    .then(() => {
+      if (!liff.isLoggedIn()) {
+        // 開発時、外部ブラウザからアクセスするために利用
+        liff.login()
+      }
+    })
     // Start to use liff's api
     .then(() => {
       // ユーザーのIDトークンを取得
