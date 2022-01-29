@@ -5,8 +5,8 @@ br
 = @video.address
 = @video.sauna
 - if @current_user.watch?(@video)
-  = link_to '視聴済', watch_path(@current_user.watches.find_by(video_id: @video.id)), class: 'btn btn-primary', role: 'button', method: :delete
+  = render 'unwatch', { video: @video }
 - else
-  = link_to '視聴済にする', watches_path(video_id: @video.id), class: 'btn btn-outline-primary', role: 'button', method: :post
+  = render 'watch', { video: @video }
 br
 = link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&text=【#{@video.sauna}】に行ってみたい！&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'
