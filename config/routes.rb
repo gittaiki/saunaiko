@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   post 'callback', to: 'line_bots#callback'
   resources :videos, only: %i[index show]
   resources :users, only: %i[new create]
+  resources :watches, only: %i[create destroy]
 end
