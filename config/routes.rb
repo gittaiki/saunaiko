@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :videos, only: %i[index show]
   resources :users, only: %i[new create]
   resources :watches, only: %i[create destroy]
+  resource :profile, only: %i[show]
 end
