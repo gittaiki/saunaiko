@@ -21,5 +21,6 @@ html
   body
     .container
       .text-center.mintyou
-        = render 'shared/header'
+        - if @current_user
+          = render 'shared/header'
         = yield

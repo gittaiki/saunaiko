@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   before_action :login_required
-  before_action :set_search
 
   private
 

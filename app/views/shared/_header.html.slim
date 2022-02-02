@@ -1,6 +1,5 @@
 header
   nav class="navbar navbar-light" style="background-color: #e3f2fd;"
     .container-fluid
-      - if @current_user
-        = render 'shared/search_form'
-        = link_to 'プロフィール', '#'
+      = render 'shared/search_form', url: videos_path
+      = link_to 'プロフィール', '#'
