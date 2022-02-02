@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+  def set_search
+    @q = Video.ransack(params[:q])
+    @videos = @q.result(distinct: true).page(params[:page])
+  end
 end
