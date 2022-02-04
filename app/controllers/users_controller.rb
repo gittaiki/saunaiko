@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_liff_id, only: %i[new]
-  skip_before_action :login_required, only: %i[new create]
+  skip_before_action :login_required
 
   def new; end
 

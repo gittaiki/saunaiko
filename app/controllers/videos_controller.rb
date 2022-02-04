@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :set_search, only: %i[index show]
+  before_action :set_search
 
   def index; end
 

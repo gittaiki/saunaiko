@@ -1,7 +1,7 @@
 = javascript_pack_tag 'profiles/show'
 
-= image_pack_tag 'point_woman_color.png', id: 'picture'
-h2#name
+= image_pack_tag 'point_woman_color.png', id: 'picture', style: 'width: 120px;'
+h5#name
 p
   |視聴済み動画数&nbsp;#{@watch_videos}
 = render 'profiles/progress_bar', { progress_percent: @progress_percent }
