@@ -1,0 +1,8 @@
+= javascript_pack_tag 'profiles/show'
+
+= image_pack_tag 'point_woman_color.png', id: 'picture', style: 'width: 120px;'
+h5#name
+p
+  |視聴済み動画数&nbsp;#{@watch_videos}
+= render 'profiles/progress_bar', { progress_percent: @progress_percent }
+= link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'

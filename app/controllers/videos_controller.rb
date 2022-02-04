@@ -1,11 +1,7 @@
 class VideosController < ApplicationController
-  before_action :set_search, only: %i[index show]
+  before_action :set_search
 
-  def index
-    watch_videos = Watch.where(user_id: current_user.id).count
-    total_videos = Video.count
-    @progress_percent = watch_videos.to_f / total_videos * 100
-  end
+  def index; end
 
   def show
     @video = Video.find(params[:id])
