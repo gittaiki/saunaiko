@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_search, only: %i[show]
+  before_action :set_liff_id, only: %i[show]
 
   def show
     @watch_videos = Watch.where(user_id: current_user.id).count
