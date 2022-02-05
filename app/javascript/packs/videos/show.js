@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // }
     });
   }
-  const redirect_url = `https://liff.line.me/${gon.liff_id}/videos/${gon.video.id}`;
+  const redirect_url = `https://3272-2404-7a80-2c81-7600-bdae-84da-e18d-cd52.ngrok.io/videos/${gon.video.id}`;
   const send = document.getElementById('send');
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
