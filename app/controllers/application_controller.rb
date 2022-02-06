@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :login_required
+  helper_method :current_user
 
   private
 
