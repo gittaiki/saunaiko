@@ -6,6 +6,7 @@
   = video.sauna
   br
   = video.address
-- if @current_user.watch?(video)
-  span.badge.rounded-pill.bg-primary
-    | 視聴済
+- if current_user
+  - if current_user.watch?(video)
+    span.badge.rounded-pill.bg-primary
+      | 視聴済

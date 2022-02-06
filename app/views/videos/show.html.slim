@@ -4,8 +4,12 @@
 br
 = @video.address
 = @video.sauna
-- if @current_user
-  - if @current_user.watch?(@video)
+br
+= @title
+br
+= @author_name
+- if current_user
+  - if current_user.watch?(@video)
     = render 'unwatch', { video: @video }
   - else
     = render 'watch', { video: @video }
