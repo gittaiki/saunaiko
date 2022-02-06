@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // }
     });
   }
-  const redirect_url = `https://3272-2404-7a80-2c81-7600-bdae-84da-e18d-cd52.ngrok.io/videos/${gon.video.id}`;
+  const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
+  const account_url = `https://lin.ee/YM3TI37`;
   const send = document.getElementById('send');
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
@@ -37,27 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
       liff.shareTargetPicker([
         message = {
           "type": "template",
-          "altText": "サウナのお誘いが届いています",
+          "altText": "サウナのお誘い",
           "template": {
-            "thumbnailImageUrl": "https://res.cloudinary.com/dr1peiwz2/image/upload/v1613642190/girl_ymjnoj.jpg",
+            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1BvbtKEE_7GvHUlusKQnFshFuUPZ2U-Cy",
             "type": "buttons",
-            "title": "サウナのお誘い",
-            "text": "サウナのお誘いが届いています",
+            "title": "サウナのお誘い♨",
+            "text": "サウナに行きたいです！\n一緒にととのいましょう！",
             "actions": [
               {
                 "type": "uri",
                 "label": "誘われたサウナを確認する",
-                "uri": redirect_url
+                "uri": video_url
+              },
+              {
+                "type": "uri",
+                "label": "サウナに行く準備をする",
+                "uri": account_url
               }
             ]
           }
         }
       ])
-      .then(() => {
-        document.getElementById('success').innerText = 'サウナのお誘いをしました'
-      })
-      .catch(() => {
-        document.getElementById('error').innerText = 'サウナのお誘いに失敗しました'
-      });
   })
 })
