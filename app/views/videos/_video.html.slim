@@ -3,7 +3,7 @@
     = image_tag "https://img.youtube.com/vi/#{video.youtube_id}/mqdefault.jpg", class: 'img-fluid rounded'
   .col-7.px-2.align-items-start
     = link_to video, data: { 'turbolinks': false } do
-      p.mb-1.link-dark #{video.sauna}
+      p.mb-1.link-dark.fw-bolder #{video.sauna}
     p.mb-0.fw-light.text-truncate #{video.address}
     / - if current_user
     /   - if current_user.watch?(video)

@@ -1,5 +1,5 @@
 = search_form_for @q, url: url do |f|
-  .input-group.mb-3
-    = f.search_field :sauna_or_address_cont, class: "form-control", placeholder: '検索ワード'
+  .input-group
+    = f.search_field :sauna_or_address_cont, class: "form-control", placeholder: '地域、施設名など'
     .input-group-append
       = f.submit class: "btn btn-primary"
