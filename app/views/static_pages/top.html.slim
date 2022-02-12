@@ -1,40 +1,42 @@
-.title_background
-  h1.pt-5
-    | サウナのすゝめ
-  h5
-    | Sauna no susume
-  p.pt-3.pb-4
-    | 〜 サウナでととのう準備をするアプリ〜
-/ 一時的設置
-= link_to '開発用ログイン', new_user_path
-p 友だち追加して、ととのう準備をしよう。
-= link_to 'https://lin.ee/if0kUVq' do
-  = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0'
+.container
+  .text-center.mintyou
+    .title_background
+      h1.pt-5
+        | サウナのすゝめ
+      h5
+        | Sauna no susume
+      p.pt-3.pb-4
+        | 〜 サウナでととのう準備をするアプリ〜
+    / 一時的設置
+    = link_to '開発用ログイン', new_user_path
+    p 友だち追加して、ととのう準備をしよう。
+    = link_to 'https://lin.ee/if0kUVq' do
+      = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0'
 
-.d-flex.flex-row
-  .offset-1.mt-5
-    h5
-      | ・サウナのすゝめでできること
-.d-flex.flex-row
-  .col-6.offset-1.mt-4
-    p 1. チャットボットとの会話で、サウナの正しい入り方とマナーが学べます。
-  .col-3.offset-1.my-4
-    = image_pack_tag 'point_woman_color.png', class: "img-size"
-hr
-.d-flex.flex-row-reverse.justify-content-center
-  .col-6.offset-1.mt-4
-    p 2. チャットボットがサウナでととのうためのコツを教えてくれます。
-  .col-3.offset-1.my-4
-    = image_pack_tag 'sauna_after_color.png', class: "img-size"
-hr
-.d-flex.flex-row
-  .col-5.offset-1.mt-4
-    p 3. 動画を見ながら、サウナでととのう準備ができます。
-  .col-4.offset-1.my-4
-    = image_pack_tag 'movie_color.png', class: "img-size"
-h4.mt-3
- | サウナのすゝめをはじめよう
-p.text-muted サウナに少し興味ある。サウナでととのってみたいと思ったら友だち追加し、お役立てください。
-.mb-5
-  = link_to 'https://lin.ee/if0kUVq' do
-    = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0'
+    .d-flex.flex-row
+      .offset-1.mt-5
+        h5
+          | ・サウナのすゝめでできること
+    .d-flex.flex-row
+      .col-6.offset-1.mt-4
+        p 1. チャットボットとの会話で、サウナの正しい入り方とマナーが学べます。
+      .col-3.offset-1.my-4
+        = image_pack_tag 'point_woman_color.png', class: "img-size"
+    hr
+    .d-flex.flex-row-reverse.justify-content-center
+      .col-6.offset-1.mt-4
+        p 2. チャットボットがサウナでととのうためのコツを教えてくれます。
+      .col-3.offset-1.my-4
+        = image_pack_tag 'sauna_after_color.png', class: "img-size"
+    hr
+    .d-flex.flex-row
+      .col-5.offset-1.mt-4
+        p 3. 動画を見ながら、サウナでととのう準備ができます。
+      .col-4.offset-1.my-4
+        = image_pack_tag 'movie_color.png', class: "img-size"
+    h4.mt-3
+     | サウナのすゝめをはじめよう
+    p.text-muted サウナに少し興味ある。サウナでととのってみたいと思ったら友だち追加し、お役立てください。
+    .mb-5
+      = link_to 'https://lin.ee/if0kUVq' do
+        = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0'

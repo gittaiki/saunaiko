@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "type": "template",
           "altText": "サウナのお誘い",
           "template": {
-            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1BvbtKEE_7GvHUlusKQnFshFuUPZ2U-Cy",
+            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1ioMt-EM0BMWwDmykvPywT_2pLd1WmvrX",
             "type": "buttons",
             "title": "サウナのお誘い♨",
             "text": "サウナに行きたいです！\n一緒にととのいましょう！",
