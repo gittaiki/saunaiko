@@ -1,6 +1,6 @@
+- if current_user
+  = render 'shared/header'
 .container
-  - if current_user
-    = render 'shared/header'
   - if @videos.present?
     = render @videos
   - else

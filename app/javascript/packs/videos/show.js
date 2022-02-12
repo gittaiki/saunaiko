@@ -11,18 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
       playerVars: {
         playsinline: 1,
         rel: 0,
-      },
-      // events: {
-      //   // api呼び出す準備ができると起動
-      //   'onReady': function(evt) {
-      //     evt.target.mute();
-      //     evt.target.playVideo();
-      //   }
-      // }
+      }
     });
   }
   const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
-  const account_url = `https://lin.ee/YM3TI37`;
   const send = document.getElementById('send');
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
@@ -53,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
               {
                 "type": "uri",
                 "label": "サウナに行く準備をする",
-                "uri": account_url
+                "uri": "https://lin.ee/YM3TI37"
               }
             ]
           }
