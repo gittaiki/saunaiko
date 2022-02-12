@@ -1,5 +1,12 @@
 header
-  nav class="navbar navbar-light" style="background-color: #e3f2fd;"
-    .container-fluid
-      = render 'shared/search_form', url: videos_path
-      = link_to 'プロフィール', profile_path, data: { 'turbolinks': false }
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.bg-gradient.py-3
+    .container
+      .row.align-items-center
+        = render 'shared/search_form', url: videos_path
+      button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbarNav
+        ul.navbar-nav.text-end
+          li.nav-item.mt-4
+            = link_to profile_path, class: 'nav-link py-0', data: { 'turbolinks': false } do
+              h6 プロフィール

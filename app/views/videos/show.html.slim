@@ -1,19 +1,22 @@
 = javascript_pack_tag 'videos/show'
-/ 以下の#playerはyoutubeのiframeに入れ替わる。
-#player
-br
-= @video.address
-= @video.sauna
-br
-= @title
-br
-= @author_name
 - if current_user
-  - if current_user.watch?(@video)
-    = render 'unwatch', { video: @video }
-  - else
-    = render 'watch', { video: @video }
-br
-= link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&text=【#{@video.sauna}】に行ってみたい！&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'
-br
-button#send 友だちをサウナに誘ってみる
+  = render 'shared/header'
+/ 以下の#playerはyoutubeのiframeに入れ替わる。
+.container
+  h2.my-2 #{@video.sauna}
+  p.my-0.fw-light #{@video.address}
+  .ratio.ratio-16x9
+    #player
+  h5.my-2 #{@title}
+  hr.my-1
+  .row
+    .col-9.px-3
+      p.mb-0 #{@author_name}
+    .col-3.p-0
+      - if current_user
+        - if current_user.watch?(@video)
+          = render 'unwatch', { video: @video }
+        - else
+          = render 'watch', { video: @video }
+  .text-center.mt-4
+    button#send.btn.btn-success.btn-lg 友だちを誘ってみる
