@@ -1,1 +1,2 @@
-= link_to 'いいね済', bookmark_path(@current_user.bookmarks.find_by(video_id: video.id)), id: "js-bookmark-button-for-video-#{video.id}", class: "btn btn-primary", role: 'button', method: :delete, remote: true
+= link_to bookmark_path(@current_user.bookmarks.find_by(video_id: video.id)), id: "js-bookmark-button-for-video-#{video.id}", role: 'button', method: :delete, remote: true do
+  i.fa-solid.fa-heart.fa-lg

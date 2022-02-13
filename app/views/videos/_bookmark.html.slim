@@ -1,1 +1,2 @@
-= link_to 'いいねする', bookmarks_path(video_id: video.id), id: "js-bookmark-button-for-video-#{video.id}", class: "btn btn-outline-primary", role: 'button', method: :post, remote: true
+= link_to bookmarks_path(video_id: video.id), id: "js-bookmark-button-for-video-#{video.id}", role: 'button', method: :post, remote: true do
+  i.fa-regular.fa-heart.fa-lg

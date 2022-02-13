@@ -2,4 +2,5 @@
   .input-group
     = f.search_field :sauna_or_address_cont, class: "form-control", placeholder: '地名 または 施設名を入力'
     .input-group-append
-      = f.submit class: "btn btn-primary"
+      = f.button :type => "submit", class: "btn btn-dark" do
+        i.fa-solid.fa-magnifying-glass
