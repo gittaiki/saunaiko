@@ -1,10 +1,11 @@
+= javascript_pack_tag 'profiles/show'
 - if current_user
   = render 'shared/header'
-= javascript_pack_tag 'profiles/show'
-
-= image_pack_tag 'point_woman_color.png', id: 'picture', style: 'width: 120px;'
-h5#name
-p
-  |視聴済み動画数&nbsp;#{@watch_videos}
-= render 'profiles/progress_bar', { progress_percent: @progress_percent }
-= link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'
+.container
+  .text-center.my-4
+    = image_pack_tag 'icon.png', id: 'picture', class: 'rounded-circle border border-3', style: 'width: 120px;'
+    h5#name.mt-2.mb-4
+    h6.my-1 動画視聴状況
+    = render 'profiles/progress_bar', { progress_percent: @progress_percent }
+    button#send.btn.btn-success.btn-lg.mt-4 友だちをオファーする
+    / = link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'
