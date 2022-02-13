@@ -18,5 +18,9 @@
           = render 'unwatch', { video: @video }
         - else
           = render 'watch', { video: @video }
+        - if current_user.bookmark?(@video)
+          = render 'unbookmark', { video: @video }
+        - else
+          = render 'bookmark', { video: @video }
   .text-center.mt-4
     button#send.btn.btn-success.btn-lg 友だちを誘ってみる

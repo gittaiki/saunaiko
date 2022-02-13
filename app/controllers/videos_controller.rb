@@ -15,4 +15,9 @@ class VideosController < ApplicationController
     @title = JSON.parse(res.body)['title']
     @author_name = JSON.parse(res.body)['author_name']
   end
+
+  def bookmarks
+    @q = current_user.bookmark_videos.ransack(params[:q])
+    @bookmark_videos = @q.result(distinct: true).includes(:bookmark_users).order(created_at: :desc).page(params[:page])
+  end
 end
