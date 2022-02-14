@@ -10,13 +10,20 @@
   h5.my-2 #{@title}
   hr.my-1
   .row
-    .col-9.px-3
+    .col-7.px-3
       p.mb-0 #{@author_name}
-    .col-3.p-0
-      - if current_user
+    - if current_user
+      .col-1.p-0
+        - if current_user.bookmark?(@video)
+          = render 'unbookmark', { video: @video }
+        - else
+          = render 'bookmark', { video: @video }
+      .col-4.py-0.pr-2.text-end
         - if current_user.watch?(@video)
           = render 'unwatch', { video: @video }
         - else
           = render 'watch', { video: @video }
   .text-center.mt-4
-    button#send.btn.btn-success.btn-lg 友だちを誘ってみる
+    button#send.btn.btn-success.btn-lg
+      i.fa-solid.fa-paper-plane
+      | &nbsp;友だちを誘ってみる

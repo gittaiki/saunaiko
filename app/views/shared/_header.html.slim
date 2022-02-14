@@ -9,7 +9,16 @@ header
         ul.navbar-nav.text-end
           li.nav-item.mt-4
             = link_to profile_path, class: 'nav-link py-0', data: { 'turbolinks': false } do
-              h6 プロフィール
+              h6
+                i.fa-solid.fa-circle-user.fa-lg
+                | &nbsp;&nbsp;プロフィール
           li.nav-item.mt-4
             = link_to videos_path, class: 'nav-link py-0' do
-              h6 動画一覧
+              h6
+                i.fa-solid.fa-clapperboard.fa-lg
+                | &nbsp;&nbsp;動画一覧
+          li.nav-item.mt-4
+            = link_to bookmarks_videos_path, class: 'nav-link py-0' do
+              h6
+                i.fa-solid.fa-clapperboard.fa-lg
+                | &nbsp;&nbsp;いいね

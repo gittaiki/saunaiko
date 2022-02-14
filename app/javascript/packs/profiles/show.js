@@ -19,34 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     const send = document.getElementById('send');
     send.addEventListener('click', () => {
-      // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
-      liff.init({
-        liffId: gon.liff_id
-      })
-        .then(() => {
-          if (!liff.isLoggedIn()) {
-            // 開発時、外部ブラウザからアクセスするために利用
-            liff.login()
+      liff.shareTargetPicker([
+        message = {
+          "type": "template",
+          "altText": "サウナのオファー",
+          "template": {
+            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1YbsO4D1LwKCp3gHib-ke8ruZ1E1RJFzV",
+            "type": "buttons",
+            "title": "サウナのオファー♨",
+            "text": "一緒にサウナでととのいたいです！\nオファーを受けてください！",
+            "actions": [
+              {
+                "type": "uri",
+                "label": "オファーを受け取る",
+                "uri": "https://lin.ee/YM3TI37"
+              }
+            ]
           }
-        });
-        liff.shareTargetPicker([
-          message = {
-            "type": "template",
-            "altText": "サウナのオファー",
-            "template": {
-              "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1YbsO4D1LwKCp3gHib-ke8ruZ1E1RJFzV",
-              "type": "buttons",
-              "title": "サウナのオファー♨",
-              "text": "一緒にサウナでととのいたいです！\nオファーを受けてください！",
-              "actions": [
-                {
-                  "type": "uri",
-                  "label": "オファーを受け取る",
-                  "uri": "https://lin.ee/YM3TI37"
-                }
-              ]
-            }
-          }
-        ])
+        }
+      ])
     })
 })
