@@ -1,0 +1,19 @@
+button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+  span.navbar-toggler-icon
+.collapse.navbar-collapse#navbarNav
+  ul.navbar-nav.text-end
+    li.nav-item.mt-4
+      = link_to profile_path, class: 'nav-link py-0', data: { 'turbolinks': false } do
+        h6
+          i.fa-solid.fa-circle-user.fa-lg
+          | &nbsp;&nbsp;プロフィール
+    li.nav-item.mt-4
+      = link_to videos_path, class: 'nav-link py-0' do
+        h6
+          i.fa-solid.fa-clapperboard.fa-lg
+          | &nbsp;&nbsp;動画一覧
+    li.nav-item.mt-4
+      = link_to bookmarks_videos_path, class: 'nav-link py-0' do
+        h6
+          i.fa-solid.fa-clapperboard.fa-lg
+          | &nbsp;&nbsp;いいね
