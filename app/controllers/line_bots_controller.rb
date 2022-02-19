@@ -1,6 +1,7 @@
 require 'json'
 
 class LineBotsController < ApplicationController
+  skip_before_action :login_required
   # CSRF対策を無効化する設定
   protect_from_forgery except: [:callback]
 

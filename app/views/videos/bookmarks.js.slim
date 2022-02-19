@@ -1,0 +1,2 @@
+| $('#video-pagenate').append('#{render @bookmark_videos}');
+| $('#more-link').replaceWith("#{j(link_to_next_page(@bookmark_videos, 'もっと見る', remote: true, class: 'btn btn-light', id: 'more-link'))}")
