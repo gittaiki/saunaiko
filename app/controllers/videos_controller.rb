@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
   skip_before_action :login_required
-  before_action :set_search
-  before_action :set_liff_id
+  before_action :set_search, only: %i[index show]
+  before_action :set_liff_id, only: %i[show]
   before_action :current_user
 
   def index; end

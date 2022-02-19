@@ -2,8 +2,10 @@
   = render 'shared/header'
 .container
   - if @videos.present?
-    = render @videos
+    #video-pagenate
+      = render @videos
   - else
     p.fw-light
       | 検索ワードにヒットする動画はありませんでした。
-  .my-2 = paginate @videos, theme: 'bootstrap-5'
+  .d-grid.my-3
+    = link_to_next_page @videos, 'もっと見る', remote: true, class: 'btn btn-light', id: 'more-link'
