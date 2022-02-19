@@ -23,7 +23,4 @@
           = render 'unwatch', { video: @video }
         - else
           = render 'watch', { video: @video }
-  .text-center.mt-4
-    button#send.btn.btn-success.btn-lg
-      i.fa-solid.fa-paper-plane
-      | &nbsp;友だちを誘ってみる
+  = render 'shared/send_message'

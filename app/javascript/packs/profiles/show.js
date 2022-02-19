@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name.innerText = profile.displayName
       })
     })
-    const send = document.getElementById('send');
+    const send = document.getElementById('send-message');
     send.addEventListener('click', () => {
       liff.shareTargetPicker([
         message = {

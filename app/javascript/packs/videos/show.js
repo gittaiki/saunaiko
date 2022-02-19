@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
-  const send = document.getElementById('send');
+  const send = document.getElementById('send-message');
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
     liff.init({
