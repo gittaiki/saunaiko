@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
     const send = document.getElementById('send-message');
+    // LIFFプラウザ以外、押すとターゲットピッカーが表示されるボタンを非表示
+    if (liff.isInClient()) {
+      send.style.display ="display";
+    } else {
+      send.style.display ="none";
+    }
     send.addEventListener('click', () => {
       liff.shareTargetPicker([
         message = {

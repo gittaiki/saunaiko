@@ -14,8 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
   const send = document.getElementById('send-message');
+  // LIFFプラウザ以外、押すとターゲットピッカーが表示されるボタンを非表示
+  if (liff.isInClient()) {
+    send.style.display ="display";
+  } else {
+    send.style.display ="none";
+  }
+  // const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
+  const video_url = `https://f076-2404-7a80-2c81-7600-acd3-a5de-457a-d63c.ngrok.io/videos/${gon.video.id}`;
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
     liff.init({
