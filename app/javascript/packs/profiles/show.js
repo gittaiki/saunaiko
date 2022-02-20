@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
       liff.shareTargetPicker([
         message = {
           "type": "template",
-          "altText": "サウナのオファー",
+          "altText": "サウナのお誘い",
           "template": {
-            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1YbsO4D1LwKCp3gHib-ke8ruZ1E1RJFzV",
+            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1PeFmhMPFQAsjT5jS4klisZaUJCj8xc0g",
             "type": "buttons",
-            "title": "サウナのオファー♨",
-            "text": "一緒にサウナでととのいたいです！\nオファーを受けてください！",
+            "title": "サウナのお誘い♨",
+            "text": "心身ともにととのいたいです！\nだから一緒にサウナ行こ！！",
             "actions": [
               {
                 "type": "uri",
-                "label": "オファーを受け取る",
+                "label": "サウナに行く準備をする",
                 "uri": "https://lin.ee/YM3TI37"
               }
             ]

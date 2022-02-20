@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
           "type": "template",
           "altText": "サウナのお誘い",
           "template": {
-            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1ioMt-EM0BMWwDmykvPywT_2pLd1WmvrX",
+            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1PeFmhMPFQAsjT5jS4klisZaUJCj8xc0g",
             "type": "buttons",
             "title": "サウナのお誘い♨",
-            "text": "サウナに行きたいです！\n一緒にととのいましょう！",
+            "text": "心身ともにととのいたいです！\nだから一緒にサウナ行こ！！",
             "actions": [
               {
                 "type": "uri",
