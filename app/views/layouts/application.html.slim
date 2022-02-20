@@ -1,24 +1,26 @@
 doctype html
 html
   head
-    = favicon_pack_tag 'favicon.png'
     title
-      | サウナイコ
+      | サウナイコ | サウナと友だちをマッチング
+    meta[name="description" content="サウナと友だちをマッチングするアプリ。LINEに「サウナイコ」を追加すると、友だちにサウナのお誘いと魅力を伝えることができます。"]
+    link rel="canonical" href="https://sauna-no-susume.herokuapp.com"
+    = favicon_pack_tag 'favicon.png'
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = include_gon
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    / LIFF SDK
-    script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"
     / OGPタグ
-    meta[property="og:title" content="サウナイコ"]
-    meta[property="og:description" content="行きたいサウナと友だちをマッチングするアプリです。LINEの友だちを追加するとサウナを検索して、友だちを誘うことができます。"]
-    meta[property="og:url" content="https://sauna-no-susume.herokuapp.com/"]
+    meta[property="og:title" content="サウナイコ | サウナと友だちをマッチング"]
+    meta[property="og:description" content="サウナと友だちをマッチングするアプリ。LINEに「サウナイコ」を追加すると、友だちにサウナのお誘いと魅力を伝えることができます。"]
+    meta[property="og:url" content="https://sauna-no-susume.herokuapp.com"]
     meta[property="og:image" content="#{image_url('twitter_card.png')}"]
     meta[name="twitter:card" content="summary_large_image"]
     meta[name="twitter:site" content="@_taaaaiki"]
-    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    / LIFF SDK
+    script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"
   body
     = yield
