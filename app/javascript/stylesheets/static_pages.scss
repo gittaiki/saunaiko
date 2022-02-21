@@ -1,5 +1,8 @@
-.title_background {
-    background: radial-gradient(ellipse at center, rgba(255, 225, 130,1) 0%, rgb(255, 255, 255) 65%);
+.top-wrapper {
+  background-image: url("../images/top.png");
+  width: 100%;
+  padding-top: 48%;
+  background-size: cover;
 }
 
 .img-size {
