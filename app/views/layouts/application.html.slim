@@ -3,13 +3,13 @@ html
   head
     title
       | サウナイコ
-    meta[name="description" content="サウナと友だちをマッチングするアプリ。LINEに「サウナイコ」を追加すると、友だちにサウナのお誘いと魅力を伝えることができます。"]
+    meta[name="description" content="「サウナイコ」はサウナに行くきっかけを作るアプリです。友だちになると、サウナの検索やととのうための入り方が学べます。"]
     link rel="canonical" href="https://sauna-no-susume.herokuapp.com"
     = favicon_pack_tag 'favicon.png'
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     / OGPタグ
     meta[property="og:title" content="サウナイコ"]
-    meta[property="og:description" content="サウナと友だちをマッチングするアプリ。LINEに「サウナイコ」を追加すると、友だちにサウナのお誘いと魅力を伝えることができます。"]
+    meta[property="og:description" content="「サウナイコ」はサウナに行くきっかけを作るアプリです。友だちになると、サウナの検索やととのうための入り方が学べます。"]
     meta[property="og:url" content="https://sauna-no-susume.herokuapp.com"]
     meta[property="og:image" content="#{image_url('twitter_card.png')}"]
     meta[name="twitter:card" content="summary_large_image"]
@@ -24,4 +24,6 @@ html
     = include_gon
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    - unless current_user
+      = render 'shared/before_login_header'
     = yield
