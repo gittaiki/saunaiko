@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     send.style.display ="none";
   }
-  // const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
-  const video_url = `https://f076-2404-7a80-2c81-7600-acd3-a5de-457a-d63c.ngrok.io/videos/${gon.video.id}`;
+  const video_url = `https://www.sauna-iko.net/videos/${gon.video.id}`;
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
     liff.init({
