@@ -4,15 +4,19 @@
 @import 'static_pages.scss';
 @import 'videos.scss';
 @import 'shared.scss';
-
-.mintyou {
-  font-family: serif;
-}
+@import 'profiles.scss';
 
 .navbar-light .navbar-toggler {
-    border-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
 }
 
-.fa-circle-check{
-  color: limegreen
+.fa-circle-check {
+  color: #00B900;
+}
+
+#send-message {
+  color: #fff;
+  background-color: #00B900;
+  border-color: #00B900;
+  border-radius: 30px;
 }

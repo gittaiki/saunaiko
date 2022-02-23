@@ -14,8 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
-  const send = document.getElementById('send');
+  const send = document.getElementById('send-message');
+  // LIFFプラウザ以外、押すとターゲットピッカーが表示されるボタンを非表示
+  if (liff.isInClient()) {
+    send.style.display ="display";
+  } else {
+    send.style.display ="none";
+  }
+  // const video_url = `https://43f8-180-57-16-113.ngrok.io/videos/${gon.video.id}`;
+  const video_url = `https://f076-2404-7a80-2c81-7600-acd3-a5de-457a-d63c.ngrok.io/videos/${gon.video.id}`;
   send.addEventListener('click', () => {
     // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
     liff.init({
@@ -32,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
           "type": "template",
           "altText": "サウナのお誘い",
           "template": {
-            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1ioMt-EM0BMWwDmykvPywT_2pLd1WmvrX",
+            "thumbnailImageUrl": "https://drive.google.com/uc?export=view&id=1PeFmhMPFQAsjT5jS4klisZaUJCj8xc0g",
             "type": "buttons",
             "title": "サウナのお誘い♨",
-            "text": "サウナに行きたいです！\n一緒にととのいましょう！",
+            "text": "心身ともにととのいたいです！\nだから一緒にサウナ行こ！！",
             "actions": [
               {
                 "type": "uri",

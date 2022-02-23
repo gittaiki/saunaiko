@@ -1,17 +1,22 @@
 doctype html
 html
   head
-    = favicon_pack_tag 'favicon.png'
     title
-      | サウナのすゝめ
-    script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"
-    meta[name="twitter:card" content="summary"]
-    meta[name="twitter:site" content="@_taaaaiki"]
-    meta[property="og:url" content="https://sauna-no-susume.herokuapp.com/"]
-    meta[property="og:title" content="サウナのすゝめ"]
-    meta[property="og:description" content="サウナでととのうための準備をするアプリ。友だち追加するとサウナの正しい入り方と、ととのうコツを学ぶことができます。"]
-    meta[property="og:image" content="#{image_url('twitter_card.png')}"]
+      | サウナイコ
+    meta[name="description" content="「サウナイコ」はサウナに行くきっかけを作るアプリです。友だちになると、サウナの検索やととのうための入り方が学べます。"]
+    link rel="canonical" href="https://sauna-no-susume.herokuapp.com"
+    = favicon_pack_tag 'favicon.png'
     meta[name="viewport" content="width=device-width,initial-scale=1"]
+    / OGPタグ
+    meta[property="og:title" content="サウナイコ"]
+    meta[property="og:description" content="「サウナイコ」はサウナに行くきっかけを作るアプリです。友だちになると、サウナの検索やととのうための入り方が学べます。"]
+    meta[property="og:url" content="https://sauna-no-susume.herokuapp.com"]
+    meta[property="og:image" content="#{image_url('twitter_card.png')}"]
+    meta[name="twitter:card" content="summary_large_image"]
+    meta[name="twitter:site" content="@_taaaaiki"]
+    / LIFF SDK
+    script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"
+
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -19,4 +24,6 @@ html
     = include_gon
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    - unless current_user
+      = render 'shared/before_login_header'
     = yield

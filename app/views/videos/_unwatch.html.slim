@@ -1,5 +1,5 @@
 = link_to watch_path(@current_user.watches.find_by(video_id: video.id)), id: "js-watch-button-for-video-#{video.id}", role: 'button', method: :delete, remote: true do
-  h6
+  h5
     span.badge.bg-light.text-dark
       i.fa-solid.fa-circle-check.fa-lg
       | &nbsp;視聴済
