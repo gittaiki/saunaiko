@@ -5,9 +5,6 @@
   .text-center.my-4
     = image_pack_tag 'icon.png', id: 'picture', class: 'rounded-circle border border-3 icon'
     h5#name.mt-2.mb-4
-    h6.my-1
-      i.fa-solid.fa-circle-check.fa-lg
-      | &nbsp;動画視聴状況
     = render 'profiles/progress_bar', { progress_percent: @progress_percent }
     = render 'shared/send_message'
     / = link_to 'Twitter', "https://twitter.com/share?url=https://sauna-no-susume.herokuapp.com/&hashtags=サウナ,サウナのすゝめ", target: '_blank', rel: 'noopener noreferrer'

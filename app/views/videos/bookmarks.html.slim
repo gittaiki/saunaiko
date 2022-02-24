@@ -5,7 +5,7 @@
     #video-pagenate
       = render @bookmark_videos
   - else
-    p.fw-light
-      | 検索ワードにヒットする動画はありませんでした。
+    h6.fw-light.text-center.mt-3
+      | 該当するサウナ動画は見つかりませんでした。
   .d-grid.my-3
     = link_to_next_page @bookmark_videos, 'もっと見る', remote: true, class: 'btn btn-light border border-2', id: 'more-link'
