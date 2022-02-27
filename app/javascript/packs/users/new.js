@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const request = new Request('/users', {
         headers: {
           // 検証するために必須なリクエストヘッダー
-          'Content-Type': 'application/x-www-form-urlencoded;   charset=utf-8',
+          'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
           'X-CSRF-Token': token
         },
         method: 'POST',

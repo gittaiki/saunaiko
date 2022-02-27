@@ -1,2 +1,4 @@
-= link_to bookmarks_path(video_id: video.id), id: "js-bookmark-button-for-video-#{video.id}", role: 'button', method: :post, remote: true do
-  i.fa-regular.fa-heart.fa-lg
+div id="js-bookmark-button-for-video-#{video.id}"
+  = link_to bookmarks_path(video_id: video.id), method: :post, remote: true do
+      i.fa-regular.fa-heart.fa-lg
+  td &nbsp;#{video.bookmarks.count}
