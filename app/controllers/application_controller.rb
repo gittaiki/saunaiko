@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
 
   def set_search
     @q = Video.ransack(params[:q])
-    @videos = @q.result(distinct: true).page(params[:page])
+    videos = @q.result(distinct: true).includes(:bookmark_users).shuffle
+    @videos = Kaminari.paginate_array(videos).page(params[:page])
   end
 end
