@@ -13,7 +13,7 @@
               {
                 "type": "message",
                 "label": "見てみる",
-                "text": "1つ目"
+                "text": "1つ目の理由"
               },
               {
                 "type": "message",
@@ -26,7 +26,7 @@
       }
     }
   ],
-  "1つ目": [
+  "1つ目の理由": [
     {
       "type": "template",
       "altText": "this is a carousel template",
@@ -40,7 +40,7 @@
               {
                 "type": "message",
                 "label": "次へ",
-                "text": "2つ目"
+                "text": "2つ目の理由"
               }
             ]
           }
@@ -48,7 +48,7 @@
       }
     }
   ],
-  "2つ目": [
+  "2つ目の理由": [
     {
       "type": "template",
       "altText": "this is a carousel template",
@@ -62,7 +62,7 @@
               {
                 "type": "message",
                 "label": "次へ",
-                "text": "3つ目"
+                "text": "3つ目の理由"
               }
             ]
           }
@@ -70,7 +70,7 @@
       }
     }
   ],
-  "3つ目": [
+  "3つ目の理由": [
     {
       "type": "template",
       "altText": "this is a carousel template",
