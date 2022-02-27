@@ -1,11 +1,14 @@
 - if current_user
   = render 'shared/header'
 .container
-  - if @videos.present?
-    #video-pagenate
-      = render @videos
-  - else
-    h6.fw-light.text-center.mt-3
-      | 該当するサウナ動画は見つかりませんでした。
-  .d-grid.my-3
-    = link_to_next_page @videos, 'もっと見る', remote: true, class: 'btn btn-light border border-2', id: 'more-link'
+  .row.justify-content-center.mt-3
+    .col-lg-6
+      h2.text-center 動画一覧
+      - if @videos.present?
+        #video-pagenate
+          = render @videos
+      - else
+        h6.fw-light.text-center.mt-3
+          | 該当するサウナ動画は見つかりませんでした。
+      .d-grid.mt-3.mb-5
+        = link_to_next_page @videos, 'もっと見る', remote: true, class: 'btn btn-light border border-2', id: 'more-link'
