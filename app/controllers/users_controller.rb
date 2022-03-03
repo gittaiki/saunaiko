@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_liff_id, only: %i[new]
   skip_before_action :login_required
+  before_action :set_search
 
   def new; end
 

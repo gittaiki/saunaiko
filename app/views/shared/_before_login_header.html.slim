@@ -4,3 +4,5 @@ header
       .row.align-items-center
         = link_to root_path, class: "col-auto mx-2 p-0" do
           = image_pack_tag 'logo.png', class: "logo-size"
+        .col-7.offset-md-2.px-0
+          = render 'shared/search_form', url: videos_path

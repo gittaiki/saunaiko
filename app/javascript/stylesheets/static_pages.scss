@@ -1,8 +1,18 @@
+
+.bg-gray {
+  background-color: #DBDBDB;
+}
+
+.text-blue {
+  color: #3E60FD;
+}
+
 .top-wrapper {
   background-image: url("../images/top.png");
   width: 100%;
-  padding-top: 48%;
+  padding-top: 430px;
   background-size: cover;
+  background-position: center;
 }
 
 .img-size {

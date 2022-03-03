@@ -1,31 +1,35 @@
 = javascript_pack_tag 'videos/show'
 - if current_user
   = render 'shared/header'
-/ 以下の#playerはyoutubeのiframeに入れ替わる。
 .container
-  h2.my-2 #{@video.sauna}
-  p.my-0.fw-light #{@video.address}
-  .ratio.ratio-16x9
-    #player
-  h5.my-2 #{@title}
-  hr.my-1
-  .row
-    .col-6.px-3
-      p.mb-0 #{@author_name}
-    - if current_user
-      .col-2.p-0
-        - if current_user.bookmark?(@video)
-          = render 'unbookmark', { video: @video }
-        - else
-          = render 'bookmark', { video: @video }
-      .col-4.py-0.pr-2.text-end
-        - if current_user.watch?(@video)
-          = render 'unwatch', { video: @video }
-        - else
-          = render 'watch', { video: @video }
-      = render 'shared/send_message'
-  .row.justify-content-center
-    = link_to "https://www.google.com/maps/search/?api=1&query=#{@video.sauna}&query_place_id=#{@video.address}", target: :_blank, rel: "noopener noreferrer", class: "col-7 mt-4 btn btn-googlemap" do
+  .row.justify-content-center.mt-3
+    .col-lg-8
+      h2.mb-2 #{@video.sauna}
+      p.my-0.fw-light #{@video.address}
+      .ratio.ratio-16x9
+        / 以下の#playerはyoutubeのiframeに入れ替わる。
+        #player
+      h5.my-2 #{@title}
+      hr.my-1
+      .row
+        .col-6.px-3
+          p.mb-0 #{@author_name}
+        - if current_user
+          .col-2.p-0
+            - if current_user.bookmark?(@video)
+              = render 'unbookmark', { video: @video }
+            - else
+              = render 'bookmark', { video: @video }
+          .col-4.py-0.pr-2.text-end
+            - if current_user.watch?(@video)
+              = render 'unwatch', { video: @video }
+            - else
+              = render 'watch', { video: @video }
+    = link_to "https://www.google.com/maps/search/?api=1&query=#{@video.sauna}&query_place_id=#{@video.address}", target: :_blank, rel: "noopener noreferrer", class: "col-7 mt-4 btn btn-blue" do
       p.my-0
         i.fa-solid.fa-up-right-from-square
         | &nbsp;&nbsp;Googleマップをみる
+    - if current_user
+      = render 'shared/send_message'
+    - else
+      = render 'shared/line_promotion'
