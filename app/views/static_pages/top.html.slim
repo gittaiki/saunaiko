@@ -1,33 +1,10 @@
-.top-wrapper
-  .container.text-center
-    = link_to 'https://lin.ee/if0kUVq' do
-      = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0', class: "my-5"
-.container
-  .d-flex.flex-row
-    .offset-1.mt-5
-      h5 友だちになるとできること
-  .d-flex.flex-row
-    .col-6.offset-1.mt-5
-      h6 1. サウナの検索
-      p 地名や施設名でサウナの動画が検索できます。いいねすると、すぐにチェックができます。
-    .col-3.offset-1.my-5
-      = image_pack_tag 'Analytics_PNG.png', class: "img-size"
-  hr
-  .d-flex.flex-row-reverse.justify-content-center
-    .col-6.offset-1.mt-4
-      h6 2. サウナの基礎が学べる
-      p チャット形式でサウナの入り方とマナーや、ととのうコツが学べます。
-    .col-3.offset-1.my-4
-      = image_pack_tag 'Online_education_PNG.png', class: "img-size"
-  hr
-  .d-flex.flex-row
-    .col-6.offset-1.mt-4
-      h6 3. 友だちを誘える
-      p 友だちにサウナのお誘いと魅力を伝えることができます。
-    .col-3.offset-1.my-4
-      = image_pack_tag 'Chat_PNG.png', class: "img-size"
-  .text-center
-    h5.my-4 「サウナイコ」と友だちになろう！
-    .mb-5
-      = link_to 'https://lin.ee/if0kUVq' do
-        = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0'
+.container-fluid
+  .row.bg-gray
+    .col-md-5.px-4.mt-5.mb-4
+      h6.mt-2 これからサウナに行く人が使う
+      h3.fw-bolder.my-2 サウナの楽しみ方が学べる動画検索サイト
+      .text-center.mt-3.mb-2
+        = link_to '動画一覧はこちら', videos_path, class: "btn btn-blue"
+    .col-md-7.px-0
+      .top-wrapper
+  = render 'shared/line_promotion'

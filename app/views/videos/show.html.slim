@@ -26,13 +26,9 @@
             - else
               = render 'watch', { video: @video }
           = render 'shared/send_message'
-    = link_to "https://www.google.com/maps/search/?api=1&query=#{@video.sauna}&query_place_id=#{@video.address}", target: :_blank, rel: "noopener noreferrer", class: "col-7 mt-4 btn btn-googlemap" do
+    = link_to "https://www.google.com/maps/search/?api=1&query=#{@video.sauna}&query_place_id=#{@video.address}", target: :_blank, rel: "noopener noreferrer", class: "col-7 mt-4 btn btn-blue" do
       p.my-0
         i.fa-solid.fa-up-right-from-square
         | &nbsp;&nbsp;Googleマップをみる
     - unless current_user
-      .row.justify-content-center
-        h6.col-lg-8.mt-4 「サウナイコ」と友だちになると、サウナのお誘いと魅力を友だちに伝えることができます。
-        .text-center.mb-5
-          = link_to 'https://lin.ee/if0kUVq' do
-            = image_tag 'https://scdn.line-apps.com/n/line_add_friends/btn/ja.png', alt: '友だち追加', height: '36', border: '0'
+      = render 'shared/line_promotion'
