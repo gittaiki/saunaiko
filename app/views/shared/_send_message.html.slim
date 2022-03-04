@@ -1,6 +1,14 @@
-.text-center.pt-5
-  button#send-message.btn.btn-lg
+.text-center.my-4
+  button#send-message.btn.btn-lg.offset-1
     i.fa-solid.fa-paper-plane
     | &nbsp;&nbsp;友だちを誘ってみる
-  p.mt-3 「友だちを誘ってみる」と送られるメッセージ
-  = image_pack_tag 'add_friend_2.png', class: "img-size"
+  button#modal.btn.btn-blue.btn-sm.mx-2 data-bs-target="#exampleModal" data-bs-toggle="modal" type="button"
+    | ？
+  #exampleModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" tabindex="-1"
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title 友だちに送信するメッセージ内容
+          button.btn-close aria-label="Close" data-bs-dismiss="modal" type="button"
+        .modal-body
+          = image_pack_tag 'add_friend_2.png', class: "img-size"

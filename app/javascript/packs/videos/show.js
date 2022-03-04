@@ -15,11 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   const send = document.getElementById('send-message');
+  const modal = document.getElementById('modal');
   // LIFFプラウザ以外、押すとターゲットピッカーが表示されるボタンを非表示
   if (liff.isInClient()) {
     send.style.display ="display";
+    modal.style.display ="display";
   } else {
     send.style.display ="none";
+    modal.style.display ="none";
   }
   const video_url = `https://www.sauna-iko.net/videos/${gon.video.id}`;
   send.addEventListener('click', () => {
