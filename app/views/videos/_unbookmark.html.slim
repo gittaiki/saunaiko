@@ -1,4 +1,3 @@
 div id="js-bookmark-button-for-video-#{video.id}"
   = link_to bookmark_path(@current_user.bookmarks.find_by(video_id: video.id)), method: :delete, remote: true do
-      i.fa-solid.fa-heart.fa-lg
-  td &nbsp;#{video.bookmarks.count}
+    i.fa-solid.fa-heart.fa-lg

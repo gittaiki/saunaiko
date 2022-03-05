@@ -48,6 +48,8 @@ gem 'gon'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # N+1問題を検知
+  gem 'bullet'
 end
 
 group :development do

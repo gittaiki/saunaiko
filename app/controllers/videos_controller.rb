@@ -18,6 +18,6 @@ class VideosController < ApplicationController
 
   def bookmarks
     @q = current_user.bookmark_videos.ransack(params[:q])
-    @bookmark_videos = @q.result(distinct: true).includes(:bookmark_users).page(params[:page])
+    @bookmark_videos = @q.result(distinct: true).page(params[:page])
   end
 end
