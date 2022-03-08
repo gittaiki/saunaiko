@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
+  get 'terms', to: 'static_pages#terms'
+  get 'policy', to: 'static_pages#policy'
   post 'callback', to: 'line_bots#callback'
   resources :videos, only: %i[index show] do
     get 'bookmarks', on: :collection
