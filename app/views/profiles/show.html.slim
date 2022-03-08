@@ -2,8 +2,8 @@
 - if current_user
   = render 'shared/header'
 .container
-  .text-center.my-4
+  .text-center.my-5
     = image_pack_tag 'icon.png', id: 'picture', class: 'rounded-circle border border-3 icon'
-    h5#name.mt-2.mb-4
+    h5#name.mt-2.mb-5
     = render 'profiles/progress_bar', { progress_percent: @progress_percent }
     = render 'shared/send_message'
