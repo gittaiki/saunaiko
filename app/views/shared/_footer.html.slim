@@ -1,9 +1,11 @@
-footer.footer.bg-gray.border-top style="height:70px;"
-  .container
-    .row.justify-content-around
-      .col-md-4
+footer.footer.bg-gray.border-top style="height:130px;"
+  .container-fluid
+    .row.justify-content-around.my-2
+      .col-sm-4.text-center
         = link_to '利用規約', terms_path, class: "text-decoration-none text-muted"
-      .col-md-4
+      .col-sm-4.text-center
+        = link_to 'プライバシーポリシー', policy_path, class: "text-decoration-none text-muted"
+      .col-sm-4.text-center
         = link_to 'お問い合わせ', "https://forms.gle/LYM7aMbz7jVQ5rRh7", class: "text-decoration-none text-muted", target: :_blank, rel: "noopener noreferrer"
-      .text-center
-        p.text-muted © 2022 サウナイコ
+    .text-center
+      p.text-muted © 2022 サウナイコ
