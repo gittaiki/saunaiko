@@ -3,4 +3,6 @@ class StaticPagesController < ApplicationController
   before_action :set_search
 
   def top; end
+
+  def terms; end
 end
