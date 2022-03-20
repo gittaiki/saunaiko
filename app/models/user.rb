@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates :line_user_id, presence: true, uniqueness: true
 
+  enum role: { general: 0, admin: 1 }
+
   def watch?(video)
     watch_videos.include?(video)
   end

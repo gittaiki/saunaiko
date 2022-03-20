@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title
+      | サウナイコ | 管理画面
+    meta[name="description" content="サウナの楽しみ方を学べるサービスです。サウナ関連の動画検索と、LINEアカウントとのチャットで学べます。"]
+    link rel="canonical" href="https://www.sauna-iko.net/"
+    = favicon_pack_tag 'favicon.png'
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    / OGPタグ
+    meta[property="og:title" content="サウナイコ"]
+    meta[property="og:description" content="サウナの楽しみ方を学べるサービスです。サウナ関連の動画検索と、LINEアカウントとのチャットで学べます。"]
+    meta[property="og:url" content="https://www.sauna-iko.net/"]
+    meta[property="og:image" content="#{image_url('twitter_card.png')}"]
+    meta[name="twitter:card" content="summary_large_image"]
+    meta[name="twitter:site" content="@_taaaaiki"]
+    / LIFF SDK
+    script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"
+
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = include_gon
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    = yield
