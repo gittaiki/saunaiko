@@ -1,2 +1,14 @@
-h1 Admin::Videos#show
-p Find me in app/views/admin/videos/show.html.slim
+= javascript_pack_tag 'admin/videos/show'
+.container
+  .row.justify-content-center.mt-3
+    .col-lg-8
+      h2.mb-2 #{@video.sauna}
+      p.my-0.fw-light #{@video.address}
+      .ratio.ratio-16x9
+        / 以下の#playerはyoutubeのiframeに入れ替わる。
+        #player
+  .row.mt-3
+    .col-6
+      = link_to '編集', edit_admin_video_path(@video), class: 'btn btn-success'
+    .col-6
+      = link_to '削除', admin_video_path(@video), method: :delete, data: { confirm: '本当に削除してもよろしいでしょうか？' }, class: 'btn btn-danger'

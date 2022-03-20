@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users, only: %i[new create]
-    resources :videos, only: %i[index show edit update destroy]
+    resources :videos
   end
 end
