@@ -57,7 +57,12 @@ Metrics/MethodLength:
   Exclude:
     - "app/controllers/line_bots_controller.rb"
 
-# # 行数を 25 行以上許可
-# Metrics/BlockLength:
-#   Exclude:
-#     - 'spec/**/*'
+# 行数を 25 行以上許可
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/*'
+    # - 'spec/**/*'
+
+# モジュール名::クラス名の定義を許可
+Style/ClassAndModuleChildren:
+  Enabled: false

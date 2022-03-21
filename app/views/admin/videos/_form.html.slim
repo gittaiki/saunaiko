@@ -1,0 +1,13 @@
+= form_with model: [:admin, video], local: true do |f|
+  = render 'admin/shared/error_message', object: f.object
+  .form-group
+    = f.label :youtube_id, 'YouTubeのID(11桁)'
+    = f.text_field :youtube_id, class: 'form-control'
+  .form-group
+    = f.label :address, '住所'
+    = f.text_field :address, class: 'form-control'
+  .form-group
+    = f.label :sauna, 'サウナ名'
+    = f.text_field :sauna, class: 'form-control'
+  = f.submit class:'btn btn-primary mt-3'
+= link_to '動画一覧', admin_videos_path, class: 'btn btn-info mt-3'
