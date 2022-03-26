@@ -61,7 +61,7 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/*'
-    # - 'spec/**/*'
+    - 'spec/**/*'
 
 # モジュール名::クラス名の定義を許可
 Style/ClassAndModuleChildren:
