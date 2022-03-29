@@ -7,7 +7,7 @@ RSpec.describe 'Videos', type: :system do
     before do
       visit video_path(video)
     end
-    it '動画が詳細情報が表示される' do
+    it '動画の詳細情報が表示される' do
       expect(page).to have_content video.sauna
       expect(current_path).to eq video_path(video)
     end
