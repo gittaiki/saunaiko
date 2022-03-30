@@ -37,6 +37,7 @@
 - JavaScript
 - LIFF(LINE Front-end Framework)
 - LINE Messaging API
+- RSpec
 
 ### 主要Gem
 - line-bot-api (LINE通知)
@@ -46,4 +47,4 @@
 - rubocop (Rubyの静的コード解析)
 
 ## ER図
-![ER図](https://user-images.githubusercontent.com/83480020/159709657-386f5af7-d906-416c-9579-c736052b57fc.png)
+![ER図](https://user-images.githubusercontent.com/83480020/160855835-2bbea32b-e800-48bc-bcbd-eaa42b479a03.png)

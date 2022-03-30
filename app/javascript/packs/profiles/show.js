@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     liffId: gon.liff_id
   })
   .then(() => {
-  // ログインユーザーのプロフィール情報を取り出す
+    // ログインユーザーのプロフィール情報を取り出す
     liff.getProfile()
     .then(profile => {
       // アイコン設定していなければ取得しない。
