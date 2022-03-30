@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
   liff.init({
     liffId: gon.liff_id
   })
+  .then(() => {
   // ログインユーザーのプロフィール情報を取り出す
-  liff.getProfile()
-  .then(profile => {
-    // アイコン設定していなければ取得しない。
-    if (typeof profile.pictureUrl !== 'undefined') {
-      picture.src = profile.pictureUrl
-    }
-    name.innerText = profile.displayName
+    liff.getProfile()
+    .then(profile => {
+      // アイコン設定していなければ取得しない。
+      if (typeof profile.pictureUrl !== 'undefined') {
+        picture.src = profile.pictureUrl
+      }
+      name.innerText = profile.displayName
+    })
   })
   const send = document.getElementById('send-message');
   const modal = document.getElementById('modal');
