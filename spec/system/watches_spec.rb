@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Watches", type: :system do
+RSpec.describe 'Watches', type: :system do
   let(:user) { create(:user) }
   let(:video) { create(:video) }
 
