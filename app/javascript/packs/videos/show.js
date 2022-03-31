@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const send = document.getElementById('send-message');
   const modal = document.getElementById('modal');
-  // LIFFプラウザ以外、押すとターゲットピッカーが表示されるボタンを非表示
+  // LIFFプラウザ以外、ターゲットピッカー非表示
   if (liff.isInClient()) {
     send.style.display ="display";
     modal.style.display ="display";
@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.display ="none";
   }
   const video_url = `https://www.sauna-iko.net/videos/${gon.video.id}`;
-  // ターゲットピッカーを表示
   send.addEventListener('click', () => {
-    // LIFFアプリを初期化。初期化するとSDKのメソッドを実行できる。
+    // LIFFのメソッドを実行できるようにする
     liff.init({
       liffId: gon.liff_id
     })
+    // ターゲットピッカーを表示
     liff.shareTargetPicker([
       message = {
         "type": "template",

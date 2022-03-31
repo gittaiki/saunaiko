@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Bookmarks", type: :system do
+RSpec.describe 'Bookmarks', type: :system do
   let(:user) { create(:user) }
   let(:video) { create(:video) }
 
