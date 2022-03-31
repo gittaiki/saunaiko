@@ -40,8 +40,6 @@ gem 'seed-fu'
 gem 'ransack'
 # ページネーション実装のためのgem
 gem 'kaminari'
-# 日本語化対応
-gem 'rails-i18n', '~> 6.0'
 # RailsとJavascriptの連携
 gem 'gon'
 
