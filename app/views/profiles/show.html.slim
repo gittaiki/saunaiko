@@ -5,5 +5,9 @@
   .text-center.my-5
     = image_pack_tag 'icon.png', id: 'picture', class: 'rounded-circle border border-3 icon'
     h5#name.mt-2.mb-5
-    = render 'profiles/progress_bar', { progress_percent: @progress_percent }
+    h6
+      i.fa-solid.fa-circle-check.fa-lg
+      | &nbsp;動画視聴状況：#{@views.percent}%
+    .progress.mx-4.border.border-2
+      .progress-bar role="progressbar" style="width: #{@views.percent}%;" aria-valuenow="#{@views.percent}" aria-valuemin="0" aria-valuemax="100"
     = render 'shared/send_message'
