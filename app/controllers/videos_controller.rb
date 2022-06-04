@@ -10,8 +10,7 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     gon.video = @video
     # Youtube動画情報を取得
-    oembed_url = URI.parse("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=#{@video.youtube_id}&format=json")
-    @youtube = JSON.parse(Net::HTTP.get_response(oembed_url).body)
+    @youtube = OembedInterface.new(@video).response
   end
 
   def bookmarks
