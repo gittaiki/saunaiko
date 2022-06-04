@@ -11,6 +11,6 @@ class WatchDecorator < Draper::Decorator
   #   end
 
   def percent
-    count * 100 / Video.all.count
+    count * 100 / Video.count
   end
 end
