@@ -42,6 +42,10 @@ GEM
       globalid (>= 0.3.6)
     activemodel (6.0.4.1)
       activesupport (= 6.0.4.1)
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (6.0.4.1)
       activemodel (= 6.0.4.1)
       activesupport (= 6.0.4.1)
@@ -92,6 +96,13 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    draper (4.0.2)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
+      activemodel-serializers-xml (>= 1.0)
+      activesupport (>= 5.0)
+      request_store (>= 1.0)
+      ruby2_keywords
     erubi (1.10.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -234,6 +245,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -312,6 +324,7 @@ DEPENDENCIES
   byebug
   capybara
   dotenv-rails
+  draper
   factory_bot_rails
   gon
   html2slim
