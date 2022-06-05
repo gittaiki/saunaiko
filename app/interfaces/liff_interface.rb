@@ -5,7 +5,7 @@ class LiffInterface
     @id_token = id_token
   end
 
-  def response
+  def get_user_id
     channel_id = ENV['LIFF_CHANNEL_ID']
     params = { 'id_token' => @id_token, 'client_id' => channel_id }
     uri = URI.parse('https://api.line.me/oauth2/v2.1/verify')
