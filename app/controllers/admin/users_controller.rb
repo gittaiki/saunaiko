@@ -8,10 +8,7 @@ class Admin::UsersController < Admin::BaseController
   def create
     id_token = params[:idToken]
     channel_id = ENV['ADMIN_LIFF_CHANNEL_ID']
-    params = { 'id_token' => id_token, 'client_id' => channel_id }
-    uri = URI.parse('https://api.line.me/oauth2/v2.1/verify')
-    res = Net::HTTP.post_form(uri, params)
-    line_user_id = JSON.parse(res.body)['sub']
+    line_user_id = LiffInterface.new(id_token, channel_id).get_user_id
     user = User.find_by(line_user_id: line_user_id)
     session[:user_id] = user.id
   end
