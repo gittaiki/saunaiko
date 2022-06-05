@@ -9,11 +9,8 @@ class VideosController < ApplicationController
   def show
     @video = Video.find(params[:id])
     gon.video = @video
-    # Youtube動画のタイトルとチャンネル名を取得
-    oembed_url = URI.parse("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=#{@video.youtube_id}&format=json")
-    res = Net::HTTP.get_response(oembed_url)
-    @title = JSON.parse(res.body)['title']
-    @author_name = JSON.parse(res.body)['author_name']
+    # Youtube動画情報を取得
+    @youtube = OembedInterface.new(@video).response
   end
 
   def bookmarks

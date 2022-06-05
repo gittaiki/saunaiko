@@ -9,11 +9,13 @@
       .ratio.ratio-16x9
         / 以下の#playerはyoutubeのiframeに入れ替わる。
         #player
-      h5.my-2 #{@title}
+      h5.my-2
+        = title(@youtube)
       hr.my-1
       .row
         .col-10.px-3
-          p.mb-0 #{@author_name}
+          p.mb-0
+            = author_name(@youtube)
         .col-2
           = link_to "https://twitter.com/share?url=#{request.url}/&text=#{@video.sauna} - サウナイコ&hashtags=サウナイコ,サウナ", target: '_blank', rel: 'noopener noreferrer' do
             i.fa-brands.fa-twitter.fa-lg style='color: #3399FF;'

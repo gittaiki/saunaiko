@@ -40,7 +40,7 @@ RSpec.describe Video, type: :model do
         video = create(:video)
         video_added_youtube_id = build(:video, youtube_id: video.youtube_id)
         expect(video_added_youtube_id).to be_invalid
-        expect(video_added_youtube_id.errors.full_messages).to eq ["Youtube has already been taken"]
+        expect(video_added_youtube_id.errors.full_messages).to eq ['Youtube has already been taken']
       end
     end
   end
