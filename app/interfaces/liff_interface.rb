@@ -6,7 +6,7 @@ class LiffInterface
     @channel_id = channel_id
   end
 
-  def get_user_id
+  def exam
     params = { 'id_token' => @id_token, 'client_id' => @channel_id }
     uri = URI.parse('https://api.line.me/oauth2/v2.1/verify')
     # IDトークンを検証し、ユーザーの情報を取得
