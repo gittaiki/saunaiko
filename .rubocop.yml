@@ -47,7 +47,7 @@ Layout/LineLength:
     - 'config/initializers/sorcery.rb'
 
 Metrics/AbcSize:
-  Max: 25
+  Max: 30
   Exclude:
     - "app/controllers/line_bots_controller.rb"
 

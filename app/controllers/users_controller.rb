@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def create
     id_token = params[:idToken]
     channel_id = ENV['LIFF_CHANNEL_ID']
-    line_user_id = LiffInterface.new(id_token, channel_id).get_user_id
+    line_user_id = LiffInterface.new(id_token, channel_id).exam
     user = User.find_by(line_user_id: line_user_id)
     user = User.create!(line_user_id: line_user_id) if user.nil?
     session[:user_id] = user.id
