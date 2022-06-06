@@ -37,7 +37,8 @@ class LineBotInterface
   end
 
   def json_message
-    json ||= open('public/json/line-bot.json').read
-    JSON.parse(json)
+    open('public/json/line-bot.json') do |json|
+      JSON.parse(json.read)
+    end
   end
 end
