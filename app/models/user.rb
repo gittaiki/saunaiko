@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   enum role: { general: 0, admin: 1 }
 
-  def watch?(video)
+  def watched?(video)
     watch_videos.include?(video)
   end
 

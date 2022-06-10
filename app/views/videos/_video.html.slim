@@ -13,5 +13,5 @@
           - else
             = render 'bookmark', { video: video }
         .col-5
-          - if current_user.watch?(video)
+          - if current_user.watched?(video)
             i.fa-solid.fa-circle-check.fa-lg

@@ -27,7 +27,7 @@
             - else
               = render 'bookmark', { video: @video }
           .col-3
-            - if current_user.watch?(@video)
+            - if current_user.watched?(@video)
               = render 'unwatch', { video: @video }
             - else
               = render 'watch', { video: @video }
