@@ -44,6 +44,8 @@ gem 'kaminari'
 gem 'gon'
 # デコレーター
 gem 'draper'
+# Places API
+gem 'google_places'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
