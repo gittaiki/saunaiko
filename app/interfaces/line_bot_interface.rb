@@ -23,24 +23,7 @@ class LineBotInterface
             client.reply_message(event['replyToken'], json_message['予想しないメッセージ'])
           end
         when Line::Bot::Event::MessageType::Location
-          places = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
-          latitude = event.message['latitude']
-          longitude = event.message['longitude']
-          place = places.spots(latitude, longitude, name: 'サウナ', language: 'ja').first
-          if place
-            client.reply_message(event['replyToken'],
-                                 {
-                                   "type": 'location',
-                                   "title": place.name,
-                                   "address": place.vicinity,
-                                   "latitude": place.lat,
-                                   "longitude": place.lng
-                                 })
-          else
-            client.reply_message(event['replyToken'],
-                                 { "type": 'text',
-                                   "text": '送信した位置付近にサウナは見つかりませんでした💦\n別の位置で検索してみてください。' })
-          end
+          GooglePlacesInterface.new(event).search
         end
       end
     end
