@@ -22,6 +22,8 @@ class LineBotInterface
           else
             client.reply_message(event['replyToken'], json_message['予想しないメッセージ'])
           end
+        when Line::Bot::Event::MessageType::Location
+          GooglePlacesInterface.new(event).search
         end
       end
     end

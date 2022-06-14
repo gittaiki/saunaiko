@@ -117,9 +117,14 @@ GEM
       i18n (>= 0.7)
       multi_json
       request_store (>= 1.0)
+    google_places (2.0.0)
+      httparty (>= 0.13.1)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
+    httparty (0.20.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.3)
@@ -148,11 +153,15 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
+    multi_xml (0.6.0)
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -327,6 +336,7 @@ DEPENDENCIES
   draper
   factory_bot_rails
   gon
+  google_places
   html2slim
   jbuilder (~> 2.7)
   kaminari
