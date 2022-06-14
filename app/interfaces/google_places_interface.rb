@@ -9,7 +9,7 @@ class GooglePlacesInterface
     data = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
     latitude = @event.message['latitude']
     longitude = @event.message['longitude']
-    place = data.spots(latitude, longitude, name: 'サウナ', language: 'ja', radius: 2).first
+    place = data.spots(latitude, longitude, name: 'サウナ', language: 'ja', radius: 1000).sample
     if place
       client.reply_message(@event['replyToken'],
                            {
