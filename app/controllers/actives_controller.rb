@@ -3,7 +3,9 @@ class ActivesController < ApplicationController
   before_action :set_search
 
   def index
-    @actives = current_user.actives.all
+    @actives = current_user.actives
+    @month = params[:month] ? Date.parse(params[:month]) : Time.zone.today
+    @actives_chart = @actives.visited_month(@month)
   end
 
   def new

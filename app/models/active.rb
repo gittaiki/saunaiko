@@ -9,4 +9,8 @@ class Active < ApplicationRecord
     validates :cycle_count
     validates :score
   end
+
+  def self.visited_month(month)
+    where(visited_on: month.all_month).order(visited_on: :asc).pluck(:visited_on, :score)
+  end
 end
