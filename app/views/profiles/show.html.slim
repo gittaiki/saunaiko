@@ -11,3 +11,4 @@
     .progress.mx-4.border.border-2
       .progress-bar role="progressbar" style="width: #{@views.percent}%;" aria-valuenow="#{@views.percent}" aria-valuemin="0" aria-valuemax="100"
     = render 'shared/send_message'
+    = link_to 'サ活一覧', actives_path, class: 'btn btn-info mt-3'

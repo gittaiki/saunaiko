@@ -1,0 +1,19 @@
+- if current_user
+  = render 'shared/header'
+h1 Actives#index
+p Find me in app/views/actives/index.html.slim
+= link_to 'サ活作成', new_active_path, class: 'btn btn-info mt-3'
+br
+- @actives.each do |active|
+  = active.visited_on
+  br
+  = active.sauna_minute
+  br
+  = active.water_bath_minute
+  br
+  = active.break_minute
+  br
+  = active.cycle_count
+  br
+  = active.score
+  br

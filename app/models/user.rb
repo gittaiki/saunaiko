@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :watch_videos, through: :watches, source: :video
   has_many :bookmarks, dependent: :destroy
   has_many :bookmark_videos, through: :bookmarks, source: :video
+  has_many :actives, dependent: :destroy
 
   validates :line_user_id, presence: true, uniqueness: true
 

@@ -1,0 +1,19 @@
+= form_with model: active, local: true do |f|
+  / = render 'admin/shared/error_message', object: f.object
+  .form-group
+    = f.label :visited_on, '訪問日'
+    = f.date_field :visited_on, value: Date.today.strftime("%Y-%m-%d"), class: 'form-control'
+  .form-group
+    = f.label :sauna_minute, 'サウナの入浴時間'
+    = f.number_field :sauna_minute, class: 'form-control'
+  .form-group
+    = f.label :water_bath_minute, '水風呂の入浴時間'
+    = f.number_field :water_bath_minute, class: 'form-control'
+  .form-group
+    = f.label :break_minute, '外気浴の入浴時間'
+    = f.number_field :break_minute, class: 'form-control'
+  .form-group
+    = f.label :cycle_count, 'セット数'
+    = f.number_field :cycle_count, class: 'form-control'
+  = f.submit class:'btn btn-primary mt-3'
+= link_to 'サ活一覧', actives_path, class: 'btn btn-info mt-3'
