@@ -1,4 +1,33 @@
+= javascript_pack_tag 'actives/show'
 - if current_user
   = render 'shared/header'
-h1 Actives#show
-p Find me in app/views/actives/show.html.slim
+.container
+  .text-center.my-5
+    = image_pack_tag 'icon.png', id: 'picture', class: 'rounded-circle border border-3 icon'
+    h5#name.mt-2.mb-5
+    h6
+      i.fa-solid.fa-circle-check.fa-lg
+      | &nbsp;動画視聴状況：#{@views.percent}%
+    .progress.mx-4.border.border-2
+      .progress-bar role="progressbar" style="width: #{@views.percent}%;" aria-valuenow="#{@views.percent}" aria-valuemin="0" aria-valuemax="100"
+    = render 'shared/send_message'
+
+    h5 #{@month.year}年#{@month.month}月のサ活レポート
+    = link_to "前の月のリンク", actives_path(month: @month.prev_month)
+    = link_to "次の月のリンク", actives_path(month: @month.next_month)
+    = column_chart @actives_chart
+    = link_to 'サ活作成', new_actives_path, class: 'btn btn-info mt-3'
+    br
+    - @actives.each do |active|
+      = active.visited_on
+      br
+      = active.sauna_minute
+      br
+      = active.water_bath_minute
+      br
+      = active.break_minute
+      br
+      = active.cycle_count
+      br
+      = active.score
+      br

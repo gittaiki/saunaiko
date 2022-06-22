@@ -48,14 +48,10 @@ Layout/LineLength:
 
 Metrics/AbcSize:
   Max: 30
-  Exclude:
-    - "app/controllers/line_bots_controller.rb"
 
 # メソッドの行数を30行まで許可
 Metrics/MethodLength:
   Max: 30
-  Exclude:
-    - "app/controllers/line_bots_controller.rb"
 
 # 行数を 25 行以上許可
 Metrics/BlockLength:
