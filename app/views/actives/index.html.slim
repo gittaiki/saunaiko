@@ -1,4 +1,4 @@
-= javascript_pack_tag 'actives/show'
+= javascript_pack_tag 'actives/index'
 - if current_user
   = render 'shared/header'
 .container
@@ -16,18 +16,10 @@
     = link_to "前の月のリンク", actives_path(month: @month.prev_month)
     = link_to "次の月のリンク", actives_path(month: @month.next_month)
     = column_chart @actives_chart
-    = link_to 'サ活作成', new_actives_path, class: 'btn btn-info mt-3'
+    = link_to 'サ活作成', new_active_path, class: 'btn btn-info mt-3'
     br
-    - @actives.each do |active|
-      = active.visited_on
-      br
-      = active.sauna_minute
-      br
-      = active.water_bath_minute
-      br
-      = active.break_minute
-      br
-      = active.cycle_count
-      br
-      = active.score
-      br
+    - if @actives.present?
+        #active-pagenate
+          = render @actives
+    .d-grid.mt-3.mb-5
+        = link_to_next_page @actives, 'もっと見る', remote: true, class: 'btn btn-light border border-2', id: 'more-link'

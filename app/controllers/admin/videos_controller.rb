@@ -3,8 +3,7 @@ class Admin::VideosController < Admin::BaseController
 
   def index
     @q = Video.ransack(params[:q])
-    videos = @q.result(distinct: true).order(created_at: :desc)
-    @videos = Kaminari.paginate_array(videos).page(params[:page])
+    @videos = @q.result(distinct: true).page(params[:page])
   end
 
   def show

@@ -1,0 +1,14 @@
+= active.visited_on
+br
+= active.sauna_minute
+br
+= active.water_bath_minute
+br
+= active.break_minute
+br
+= active.cycle_count
+br
+= active.score
+br
+= link_to '削除', active_path(active), method: :delete, data: { confirm: '本当に削除してもよろしいでしょうか？' }, class: 'btn btn-danger'
+br

@@ -1,11 +1,10 @@
 class ActivesController < ApplicationController
-  # skip_before_action :login_required, only: %i[show]
   before_action :set_search
-  before_action :set_liff_id, only: %i[show]
+  before_action :set_liff_id, only: %i[index]
 
-  def show
+  def index
     @views = WatchDecorator.decorate(Watch.total(current_user.id))
-    @actives = current_user.actives
+    @actives = current_user.actives.page(params[:page])
     @month = params[:month] ? Date.parse(params[:month]) : Time.zone.today
     @actives_chart = @actives.visited_month(@month)
   end
@@ -25,6 +24,12 @@ class ActivesController < ApplicationController
       flash.now[:danger] = 'サ活を記録できませんでした'
       render :new
     end
+  end
+
+  def destroy
+    @active = Active.find(params[:id])
+    @active.destroy!
+    redirect_to actives_path
   end
 
   private
