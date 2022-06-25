@@ -4,9 +4,10 @@ class ActivesController < ApplicationController
 
   def index
     @views = WatchDecorator.decorate(Watch.total(current_user.id))
-    @actives = current_user.actives.page(params[:page])
     @month = params[:month] ? Date.parse(params[:month]) : Time.zone.today
-    @actives_chart = @actives.visited_month(@month)
+    actives = current_user.actives.where(visited_on: @month.all_month)
+    @actives_chart = actives.chart_order
+    @actives = actives.order(visited_on: :desc).page(params[:page])
   end
 
   def new

@@ -10,7 +10,7 @@ class Active < ApplicationRecord
     validates :score
   end
 
-  def self.visited_month(month)
-    where(visited_on: month.all_month).order(visited_on: :asc).pluck(:visited_on, :score)
+  def self.chart_order
+    distinct.order(visited_on: :asc).pluck(:visited_on, :score)
   end
 end
