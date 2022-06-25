@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    attributes:
+      active:
+        sauna_minute: サウナの入浴時間
+        water_bath_minute: 水風呂の入浴時間
+        break_minute: 外気浴の入浴時間
+        cycle_count: 合計セット回数
+      video:
+        youtube_id: YouTubeのID
+        address: 住所
+        sauna: サウナ名

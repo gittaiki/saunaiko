@@ -1,5 +1,5 @@
 = form_with model: active, local: true do |f|
-  / = render 'shared/error_message', object: f.object
+  = render 'shared/error_message', object: f.object
   .col-8.offset-2
     .form-group
       = f.label :visited_on, '訪問日'

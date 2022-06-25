@@ -21,26 +21,26 @@ RSpec.describe Video, type: :model do
       it 'YouTubeのIDのみ未入力の場合' do
         video_without_youtube_id = build(:video, youtube_id: '')
         expect(video_without_youtube_id).to be_invalid
-        expect(video_without_youtube_id.errors.full_messages).to eq ["Youtube can't be blank"]
+        expect(video_without_youtube_id.errors.full_messages).to eq ['YouTubeのIDを入力してください']
       end
 
       it '住所のみ未入力の場合' do
         video_without_address = build(:video, address: '')
         expect(video_without_address).to be_invalid
-        expect(video_without_address.errors.full_messages).to eq ["Address can't be blank"]
+        expect(video_without_address.errors.full_messages).to eq ['住所を入力してください']
       end
 
       it 'サウナ名のみ未入力の場合' do
         video_without_sauna = build(:video, sauna: '')
         expect(video_without_sauna).to be_invalid
-        expect(video_without_sauna.errors.full_messages).to eq ["Sauna can't be blank"]
+        expect(video_without_sauna.errors.full_messages).to eq ['サウナ名を入力してください']
       end
 
       it '追加済みのYouTubeのIDを追加する場合' do
         video = create(:video)
         video_added_youtube_id = build(:video, youtube_id: video.youtube_id)
         expect(video_added_youtube_id).to be_invalid
-        expect(video_added_youtube_id.errors.full_messages).to eq ['Youtube has already been taken']
+        expect(video_added_youtube_id.errors.full_messages).to eq ['YouTubeのIDはすでに存在します']
       end
     end
   end
