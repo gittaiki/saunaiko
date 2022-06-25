@@ -1,5 +1,5 @@
 = form_with model: [:admin, video], local: true do |f|
-  = render 'admin/shared/error_message', object: f.object
+  = render 'shared/error_message', object: f.object
   .form-group
     = f.label :youtube_id, 'YouTubeのID(11桁)'
     = f.text_field :youtube_id, class: 'form-control'

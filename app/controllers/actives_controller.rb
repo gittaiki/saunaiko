@@ -16,9 +16,11 @@ class ActivesController < ApplicationController
 
   def create
     @active = current_user.actives.build(active_params)
-    sauna_score if @active.sauna_minute >= 6
-    water_bath_score if @active.water_bath_minute >= 1
-    cycle_score if @active.cycle_count >= 2
+    if @active.valid?
+      sauna_score if @active.sauna_minute >= 6
+      water_bath_score if @active.water_bath_minute >= 1
+      cycle_score if @active.cycle_count >= 2
+    end
     if @active.save
       redirect_to actives_path, success: 'サ活を記録しました'
     else
