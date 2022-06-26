@@ -22,7 +22,7 @@ class ActivesController < ApplicationController
       cycle_score if @active.cycle_count >= 2
     end
     if @active.save
-      redirect_to actives_path, success: 'サ活を記録しました'
+      redirect_to actives_path, success: "サ活を記録しました。ととのい度「#{@active.score}」です。"
     else
       flash.now[:danger] = 'サ活を記録できませんでした'
       render :new

@@ -19,4 +19,4 @@
     .text-center
       = f.submit '記録する', class:'btn btn-blue mt-3'
     .text-center.my-5
-      = link_to 'キャンセル', actives_path, class: 'link-dark text-decoration-none'
+      = link_to 'キャンセル', actives_path, data: { 'turbolinks': false }, class: 'link-dark text-decoration-none'

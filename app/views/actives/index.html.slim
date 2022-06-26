@@ -12,12 +12,12 @@
 
     .row
       .col-2
-        = link_to actives_path(month: @month.prev_month) do
+        = link_to actives_path(month: @month.prev_month), data: { 'turbolinks': false } do
           i.fa-solid.fa-circle-chevron-left.fa-2x
       .col-8.px-0
         h5 #{@month.year}年#{@month.month}月のサ活レポート
       .col-2
-        = link_to actives_path(month: @month.next_month) do
+        = link_to actives_path(month: @month.next_month), data: { 'turbolinks': false } do
           i.fa-solid.fa-circle-chevron-right.fa-2x
     h6.mt-3 ととのい度グラフ
     = column_chart @actives_chart, height: '200px', colors: ['#00B900', '#5DE15D']
