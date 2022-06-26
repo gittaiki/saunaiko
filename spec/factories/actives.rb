@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :active do
-    visited_on { '2022-06-19 10:56:26' }
+    visited_on { Time.zone.today }
     sauna_minute { 1 }
     water_bath_minute { 1 }
     break_minute { 1 }
     cycle_count { 1 }
-    user { nil }
+    association :user
   end
 end

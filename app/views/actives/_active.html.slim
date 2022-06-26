@@ -4,8 +4,8 @@
   .col-1.offset-5
     = link_to active_path(active), method: :delete, data: { confirm: '本当に削除してもよろしいでしょうか？' } do
       i.fa-solid.fa-trash-can
-  h6.mb-1 サウナ：#{active.sauna_minute}分 × #{active.cycle_count}
-  h6.mb-1 水風呂：#{active.water_bath_minute}分 × #{active.cycle_count}
-  h6.mb-3 外気浴：#{active.break_minute}分 × #{active.cycle_count}
+  h6.mb-1 サウナ：#{active.sauna_minute}分 × #{active.cycle_count}回
+  h6.mb-1 水風呂：#{active.water_bath_minute}分 × #{active.cycle_count}回
+  h6.mb-3 外気浴：#{active.break_minute}分 × #{active.cycle_count}回
   h6.mb-2 ととのい度：#{active.score}
   .border-bottom
