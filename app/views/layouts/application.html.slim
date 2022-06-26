@@ -26,7 +26,10 @@ html
     - if Rails.env.production?
       = render 'layouts/google_analytics'
   body
+    - if current_user
+      = render 'shared/header'
     - unless current_user
       = render 'shared/before_login_header'
+    = render 'shared/flash_message'
     = yield
     = render 'shared/footer'

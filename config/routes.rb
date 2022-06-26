@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :watches, only: %i[create destroy]
   resources :bookmarks, only: %i[create destroy]
-  resource :profile, only: %i[show]
+  resources :actives, only: %i[index new create destroy]
 
   namespace :admin do
     resources :users, only: %i[new create]
     resources :videos
+    resources :actives, only: %i[index destroy]
   end
 end

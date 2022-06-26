@@ -1,0 +1,35 @@
+= javascript_pack_tag 'actives/index'
+.container
+  .text-center.my-4
+    = image_pack_tag 'icon.png', id: 'picture', class: 'rounded-circle border border-3 icon'
+    h6#name.mt-2.mb-3
+    = render 'shared/send_message'
+    h6
+      i.fa-solid.fa-circle-check.fa-lg
+      | &nbsp;動画視聴状況：#{@views.percent}%
+    .progress.mx-4.mb-5.border.border-2
+      .progress-bar role="progressbar" style="width: #{@views.percent}%;" aria-valuenow="#{@views.percent}" aria-valuemin="0" aria-valuemax="100"
+
+    .row
+      .col-2
+        = link_to actives_path(month: @month.prev_month), data: { 'turbolinks': false } do
+          i.fa-solid.fa-circle-chevron-left.fa-2x
+      .col-8.px-0
+        h5 #{@month.year}年#{@month.month}月のサ活レポート
+      .col-2
+        = link_to actives_path(month: @month.next_month), data: { 'turbolinks': false } do
+          i.fa-solid.fa-circle-chevron-right.fa-2x
+    h6.mt-3 ととのい度グラフ
+    = column_chart @actives_chart, height: '200px', colors: ['#00B900', '#5DE15D']
+    = link_to new_active_path, class: 'btn btn-blue btn-lg fixed-btn' do
+      i.fa-solid.fa-pencil
+      | &nbsp;&nbsp;記録
+    h6.mt-4 記録一覧
+    - if @actives.present?
+      #active-pagenate
+        = render @actives
+    - else
+      h6.fw-light.text-center.mt-3
+        | #{@month.month}月の記録はありませんでした。
+    .d-grid.mt-3.mb-5
+      = link_to_next_page @actives, 'もっと見る', remote: true, class: 'btn btn-light border border-2', id: 'more-link'

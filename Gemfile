@@ -46,6 +46,12 @@ gem 'gon'
 gem 'draper'
 # Places API
 gem 'google_places'
+# グラフの埋め込み
+gem 'chartkick'
+# 日本語化
+gem 'rails-i18n', '~> 6.0'
+# 認可
+gem 'pundit'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

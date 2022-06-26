@@ -3,17 +3,12 @@ button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#n
 .collapse.navbar-collapse#navbarNav
   ul.navbar-nav.text-end
     li.nav-item.mt-4
-      = link_to actives_path, class: 'nav-link py-0', data: { 'turbolinks': false } do
+      = link_to admin_actives_path, class: 'nav-link py-0', data: { 'turbolinks': false } do
         h6
           i.fa-solid.fa-circle-user.fa-lg
           | &nbsp;&nbsp;サ活
     li.nav-item.mt-4
-      = link_to videos_path, class: 'nav-link py-0' do
+      = link_to admin_videos_path, class: 'nav-link py-0' do
         h6
           i.fa-solid.fa-circle-play.fa-lg
           | &nbsp;&nbsp;動画一覧
-    li.nav-item.mt-4
-      = link_to bookmarks_videos_path, class: 'nav-link py-0' do
-        h6
-          i.fa-solid.fa-hand-holding-heart.fa-lg
-          | &nbsp;&nbsp;お気に入り動画
