@@ -1,0 +1,14 @@
+button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+  span.navbar-toggler-icon
+.collapse.navbar-collapse#navbarNav
+  ul.navbar-nav.text-end
+    li.nav-item.mt-4
+      = link_to admin_actives_path, class: 'nav-link py-0', data: { 'turbolinks': false } do
+        h6
+          i.fa-solid.fa-circle-user.fa-lg
+          | &nbsp;&nbsp;サ活
+    li.nav-item.mt-4
+      = link_to admin_videos_path, class: 'nav-link py-0' do
+        h6
+          i.fa-solid.fa-circle-play.fa-lg
+          | &nbsp;&nbsp;動画一覧

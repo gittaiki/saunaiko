@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, only: %i[new create]
     resources :videos
+    resources :actives, only: %i[index destroy]
   end
 end

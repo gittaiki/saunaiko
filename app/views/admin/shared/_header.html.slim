@@ -1,0 +1,6 @@
+header
+  nav.navbar.navbar-expand-lg.navbar-light.bg-gray.py-2
+    .container
+      .align-items-center
+      - if current_user
+        = render 'admin/shared/drawer'

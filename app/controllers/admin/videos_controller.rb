@@ -1,5 +1,6 @@
 class Admin::VideosController < Admin::BaseController
   before_action :set_video, only: %i[show edit update destroy]
+  before_action :authorize_video
 
   def index
     @q = Video.ransack(params[:q])
@@ -48,5 +49,9 @@ class Admin::VideosController < Admin::BaseController
 
   def video_params
     params.require(:video).permit(:youtube_id, :address, :sauna)
+  end
+
+  def authorize_video
+    authorize(Video)
   end
 end

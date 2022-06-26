@@ -32,7 +32,7 @@ class ActivesController < ApplicationController
   def destroy
     @active = Active.find(params[:id])
     @active.destroy!
-    redirect_to actives_path
+    redirect_to actives_path, success: 'サ活の記録を削除しました'
   end
 
   private

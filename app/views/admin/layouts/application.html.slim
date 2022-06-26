@@ -24,5 +24,7 @@ html
     = include_gon
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    - if current_user
+      = render 'admin/shared/header'
     = render 'shared/flash_message'
     = yield

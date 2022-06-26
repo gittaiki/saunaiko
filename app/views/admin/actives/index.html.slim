@@ -1,0 +1,20 @@
+.container
+  .text-center.my-4
+    .row
+      .col-2
+        = link_to admin_actives_path(month: @month.prev_month) do
+          i.fa-solid.fa-circle-chevron-left.fa-2x
+      .col-8.px-0
+        h5 #{@month.year}年#{@month.month}月のサ活レポート
+      .col-2
+        = link_to admin_actives_path(month: @month.next_month) do
+          i.fa-solid.fa-circle-chevron-right.fa-2x
+    h6.mt-4 記録一覧
+    - if @actives.present?
+      #active-pagenate
+        = render @actives
+    - else
+      h6.fw-light.text-center.mt-3
+        | #{@month.month}月の記録はありませんでした。
+    .d-grid.mt-3.mb-5
+      = link_to_next_page @actives, 'もっと見る', remote: true, class: 'btn btn-light border border-2', id: 'more-link'
